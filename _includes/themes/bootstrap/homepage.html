@@ -3,7 +3,7 @@
 <head>
   <meta charset="utf-8">
 
-  <title>{{ page.title }}</title>
+  <title>{{ page.title }} | {{ page.tagline }}</title>
   {% if page.description %}<meta name="description" content="{{ page.description }}">{% endif %}
   <meta name="author" content="{{ site.author.name }}">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -64,7 +64,7 @@
   </div>
 
   <footer>
-    <p class="text-right"><small>&copy; 2014. legal bullshit here. or not. its free.</small></p>
+    <p class="text-right"><small>&copy; 2014. {{ site.author.tagline }}</small></p>
   </footer>
 
 </div> <!-- /container -->
