@@ -60,9 +60,8 @@
       </div>
 
       <div class="col-lg-10">
-        <h3><a href="{{ BASE_PATH }}{{ post.url }}">{{ post.title }}</a></h3>
-        <p>{{ post.tagline }}</p>
-        {{ post.date | date_to_string }}
+        <h3><a href="{{ BASE_PATH }}{{ post.url }}">{{ post.title }}</a> <small>{{ post.date | date_to_string }}</small></h3>
+        {{ post.tagline }}
       </div>
     </div>
   {% endfor %}
