@@ -1,6 +1,6 @@
 ---
 layout: homepage
-title: Kevin Quillen
-tagline: Supporting tagline
+title: Boom
+tagline: Welcome
 ---
 {% include JB/setup %}
