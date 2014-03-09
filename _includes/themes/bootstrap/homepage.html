@@ -55,8 +55,13 @@
 
   {% for post in site.posts %}
     <div class="row">
-      <h3><a href="{{ BASE_PATH }}{{ post.url }}">{{ post.title }}</a></h3>
-      {{ post.date | date_to_string }}
+      <div class="col-lg-4">
+        <span class="glyphicon glyphicon-cog"></span>
+      </div>
+
+      <div class="col-lg-8">
+        <h3><a href="{{ BASE_PATH }}{{ post.url }}">{{ post.title }}</a></h3>
+      </div>
     </div>
   {% endfor %}
 
