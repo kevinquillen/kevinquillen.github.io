@@ -9,6 +9,8 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
   <link href="{{ ASSET_PATH }}/bootstrap/resources/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+  <link href="{{ ASSET_PATH }}/bootstrap/css/kevinquillen.css" rel="stylesheet">
+  <link href="{{ ASSET_PATH }}/bootstrap/css/pygment_trac.css" rel="stylesheet">
   <script src="{{ ASSET_PATH }}/bootstrap/resources/bootstrap/js/prism.js"></script>
 
   <!--[if lt IE 9]>
@@ -50,18 +52,16 @@
   </div>
 
   <div class="row">
-    <div class="col-lg-4">
-      <h4><span class="glyphicon glyphicon-user"></span> Abstraction for Users</h4>
-      <p>Extend beyond the core commands - take control of your site and add interactive elements.</p>
-    </div>
-    <div class="col-lg-4">
-      <h4><span class="glyphicon glyphicon-list-alt"></span> Views</h4>
-      <p>Extend beyond the core commands - take control of your site and add interactive elements.</p>
-    </div>
-    <div class="col-lg-4">
-      <h4><span class="glyphicon glyphicon-cloud-download"></span> Third party integration</h4>
-      <p>Extend beyond the core commands - take control of your site and add interactive elements.</p>
-    </div>
+    <pre class="language-markup"><code class="language-javascript">
+      function performRequest(url) {
+      $.ajax({
+      url: url,
+      context: document.body
+      }).done(function() {
+      $(this).addClass( "done" );
+      });
+      }
+    </code></pre>
   </div>
 
   <footer>

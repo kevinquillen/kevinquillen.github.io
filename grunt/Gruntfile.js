@@ -15,12 +15,12 @@ module.exports = function(grunt) {
     sass: {
       dist: {
         options: {
-          outputStyle: 'expanded',
+          outputStyle: 'compressed',
           sourceComments: 'none',
           includePaths: ['<%= global_vars.theme_scss %>']
         },
         files: {
-          '<%= global_vars.theme_css %>/<%= global_vars.theme_name %>.css': '<%= global_vars.theme_scss %>/styles.scss'
+          '<%= global_vars.theme_css %>/kevinquillen.css': '<%= global_vars.theme_scss %>/styles.scss'
         }
       }
     },
