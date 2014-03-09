@@ -53,11 +53,12 @@
     </code></pre>
   </div>
 
-  <ul class="posts">
-    {% for post in site.posts %}
-      <li><span>{{ post.date | date_to_string }}</span> &raquo; <a href="{{ BASE_PATH }}{{ post.url }}">{{ post.title }}</a></li>
-    {% endfor %}
-  </ul>
+  {% for post in site.posts %}
+    <div class="row">
+      <h3><a href="{{ BASE_PATH }}{{ post.url }}">{{ post.title }}</a></h3>
+      {{ post.date | date_to_string }}
+    </div>
+  {% endfor %}
 
   <footer>
     <p class="text-right"><small>&copy; 2014. {{ site.author.tagline }}</small></p>
