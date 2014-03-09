@@ -996,7 +996,8 @@ JUMBOTRON
 */
 
 .jumbotron {
-  background-color: #ecf0f1;
+  background-color: #1c2533;
+  background: linear-gradient(20deg, #080f1f 30%, #2b4b5a 87%, #435e67 100%);
   h1 {
     font-weight: 700;
     font-size: 3em;
@@ -1566,3 +1567,4 @@ footer {
   padding-top: 1em;
   border-top: 1px solid #dcdcdc;
 }
+
