@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+
+  <title>{{ page.title }}</title>
+  {% if page.description %}<meta name="description" content="{{ page.description }}">{% endif %}
+  <meta name="author" content="{{ site.author.name }}">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <link href="{{ ASSET_PATH }}/resources/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+
+  <!--[if lt IE 9]>
+  <script src="{{ ASSET_PATH }}/resources/respond/Respond.min.js"></script>
+  <![endif]-->
+
+  <link href="{{ BASE_PATH }}{{ site.JB.atom_path }}" type="application/atom+xml" rel="alternate" title="Sitewide ATOM Feed">
+  <link href="{{ BASE_PATH }}{{ site.JB.rss_path }}" type="application/rss+xml" rel="alternate" title="Sitewide RSS Feed">
+</head>
+<body>
+
+<div class="jumbotron">
+  <div class="container">
+    <h1 class="text-center">Drupal - The Hard Parts.</h1>
+    <p class="text-center">AJAX Commands. Entity API. Advanced theming. Third party integration. Tackle Drupal with confidence.</p>
+  </div>
+</div>
+
+<div class="container" role="main">
+
+  <div class="callout callout-warning">
+    <h4>This documentation is a work in progress.</h4>
+    <p>Please check back often.</p>
+  </div>
+
+  <div class="row">
+    <div class="col-lg-4">
+      <h4><a href="ajax-commands/index.html"><span class="glyphicon glyphicon-flash"></span> AJAX Commands</a></h4>
+      <p>Extend beyond the core commands - take control of your site and add interactive elements.</p>
+    </div>
+    <div class="col-lg-4">
+      <h4><span class="glyphicon glyphicon-wrench"></span> Entity API</h4>
+      <p>Extend beyond the core commands - take control of your site and add interactive elements.</p>
+    </div>
+    <div class="col-lg-4">
+      <h4><span class="glyphicon glyphicon-pencil"></span> Advanced Theming</h4>
+      <p>Extend beyond the core commands - take control of your site and add interactive elements.</p>
+    </div>
+  </div>
+
+  <div class="row">
+    <div class="col-lg-4">
+      <h4><span class="glyphicon glyphicon-user"></span> Abstraction for Users</h4>
+      <p>Extend beyond the core commands - take control of your site and add interactive elements.</p>
+    </div>
+    <div class="col-lg-4">
+      <h4><span class="glyphicon glyphicon-list-alt"></span> Views</h4>
+      <p>Extend beyond the core commands - take control of your site and add interactive elements.</p>
+    </div>
+    <div class="col-lg-4">
+      <h4><span class="glyphicon glyphicon-cloud-download"></span> Third party integration</h4>
+      <p>Extend beyond the core commands - take control of your site and add interactive elements.</p>
+    </div>
+  </div>
+
+  <footer>
+    <p class="text-right"><small>&copy; 2014. legal bullshit here. or not. its free.</small></p>
+  </footer>
+
+</div> <!-- /container -->
+
+{% include JB/analytics %}
+<script src="{{ ASSET_PATH }}/resources/jquery/jquery.min.js"></script>
+<script src="{{ ASSET_PATH }}/resources/bootstrap/js/bootstrap.min.js"></script>
+</body>
+</html>
