@@ -1572,9 +1572,22 @@ footer {
   border-top: 1px solid #dcdcdc;
 }
 
-.icon-blue {
+div.posts-list {
+  margin-bottom: .5em;
+}
+
+.icon {
   padding: 20px;
   text-align: center;
-  background: #a6e22e;
-  color: #fff;
+  font-size: 2.2em;
+
+  .icon-cog {
+    background: #a6e22e;
+    color: #fff;
+  }
+
+  .icon-flash {
+    background: #375F62;
+    color: #fff;
+  }
 }

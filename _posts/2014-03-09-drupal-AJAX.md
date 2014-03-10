@@ -2,9 +2,9 @@
 layout: post
 category : lessons
 tags : [intro, tutorial]
-title: Setting up PHPUnit testing for Drupal 7
+title: Using #ajax for interactive Drupal forms.
 tagline: Drupal 8 ships with PHPUnit tests in its core, replacing SimpleTest. Here is how to get it running in Drupal 7.
-icon: cog
+icon: flash
 ---
 {% include JB/setup %}
 

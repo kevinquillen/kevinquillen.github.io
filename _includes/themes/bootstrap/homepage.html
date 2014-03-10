@@ -25,7 +25,7 @@
 <div class="jumbotron">
   <div class="container">
     <h1 class="text-center">Hello.</h1>
-    <p class="text-center">Hi. I'm Kevin, a developer. These are my thoughts.</p>
+    <p class="text-center">I'm Kevin, I'm a developer. These are my thoughts.</p>
   </div>
 </div>
 
@@ -33,10 +33,6 @@
 
   <div class="callout callout-warning">
     <h4>This is a work in progress.</h4>
-  </div>
-
-  <div class="row">
-
   </div>
 
   <div class="row">
@@ -53,13 +49,14 @@
   </div>
 
   {% for post in site.posts %}
-    <div class="row">
-      <div class="col-lg-2 icon-blue">
-        <span class="glyphicon glyphicon-cog"></span>
+    <div class="row posts-list">
+      <div class="col-lg-1 icon icon-{{ post.icon }}">
+        <span class="glyphicon glyphicon-{{ post.icon }}"></span>
       </div>
 
-      <div class="col-lg-10">
-        <h3><a href="{{ BASE_PATH }}{{ post.url }}">{{ post.title }}</a> <small>{{ post.date | date_to_string }}</small></h3>
+      <div class="col-lg-11">
+        <h3><a href="{{ BASE_PATH }}{{ post.url }}">{{ post.title }}</a></h3>
+        <!--<small>{{ post.date | date_to_string }}</small>-->
         {{ post.tagline }}
       </div>
     </div>
