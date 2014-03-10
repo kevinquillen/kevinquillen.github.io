@@ -2,8 +2,8 @@
 layout: post
 category : lessons
 tags : [intro, tutorial]
-title: Using #ajax for interactive Drupal forms.
-tagline: Drupal 8 ships with PHPUnit tests in its core, replacing SimpleTest. Here is how to get it running in Drupal 7.
+title: Using the AJAX property for interactive Drupal forms.
+tagline: You can make your Drupal forms more interactive for the end user by utilizing the AJAX wrapper.
 icon: flash
 ---
 {% include JB/setup %}
