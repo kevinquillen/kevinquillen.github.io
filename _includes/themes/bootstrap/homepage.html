@@ -8,7 +8,8 @@
   <meta name="author" content="{{ site.author.name }}">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-  <link href="{{ ASSET_PATH }}/bootstrap/resources/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+  <!--<link href="{{ ASSET_PATH }}/bootstrap/resources/bootstrap/css/bootstrap.min.css" rel="stylesheet">-->
+  <link href="{{ ASSET_PATH }}/bootstrap/resources/bootstrap/css/flattly.min.css" rel="stylesheet">
   <link href="{{ ASSET_PATH }}/bootstrap/css/kevinquillen.css" rel="stylesheet">
   <link href="{{ ASSET_PATH }}/bootstrap/css/pygment_trac.css" rel="stylesheet">
   <script src="{{ ASSET_PATH }}/bootstrap/resources/bootstrap/js/prism.js"></script>
@@ -35,23 +36,27 @@
     <h4>This is a work in progress.</h4>
   </div>
 
-  <div class="row">
-    <pre class="language-markup"><code class="language-javascript">
-      function performRequest(url) {
-        $.ajax({
-          url: url,
-          context: document.body
-        }).done(function() {
-          $(this).addClass( "done" );
-        });
-      }
-    </code></pre>
+  <div class="callout callout-warning">
+    <h4>The latest post should go here, larger than the others.</h4>
   </div>
+
+  <!--<div class="row">-->
+    <!--<pre class="language-markup"><code class="language-javascript">-->
+      <!--function performRequest(url) {-->
+        <!--$.ajax({-->
+          <!--url: url,-->
+          <!--context: document.body-->
+        <!--}).done(function() {-->
+          <!--$(this).addClass( "done" );-->
+        <!--});-->
+      <!--}-->
+    <!--</code></pre>-->
+  <!--</div>-->
 
   {% for post in site.posts %}
     <div class="row posts-list">
-      <div class="col-lg-1 icon icon-{{ post.icon }}">
-        <span class="glyphicon glyphicon-{{ post.icon }}"></span>
+      <div class="col-lg-1">
+        <div class="icon icon-{{ post.icon }}"><span class="glyphicon glyphicon-{{ post.icon }}"></span></div>
       </div>
 
       <div class="col-lg-11">

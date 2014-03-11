@@ -1579,7 +1579,11 @@ div.posts-list {
 .icon {
   padding: 20px 20px 12px 20px;
   text-align: center;
-  font-size: 2.2em;
+  font-size: 1.3em;
+  border-radius: 30px 30px 30px 30px;
+  width: 60px;
+  height: 60px;
+  display: block;
 
   &.icon-cog {
     background: #a6e22e;
