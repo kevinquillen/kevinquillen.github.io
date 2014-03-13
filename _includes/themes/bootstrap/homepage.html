@@ -1,36 +1,7 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-  <meta charset="utf-8">
-
-  <title>{{ page.title }} | {{ page.tagline }}</title>
-  {% if page.description %}<meta name="description" content="{{ page.description }}">{% endif %}
-  <meta name="author" content="{{ site.author.name }}">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
-  <!--<link href="{{ ASSET_PATH }}/bootstrap/resources/bootstrap/css/bootstrap.min.css" rel="stylesheet">-->
-  <link href="{{ ASSET_PATH }}/bootstrap/css/flattly.min.css" rel="stylesheet">
-  <link href="{{ ASSET_PATH }}/bootstrap/css/kevinquillen.css" rel="stylesheet">
-  <link href="{{ ASSET_PATH }}/bootstrap/css/pygment_trac.css" rel="stylesheet">
-
-  <!--[if lt IE 9]>
-  <script src="{{ ASSET_PATH }}/bootstrap/resources/respond/Respond.min.js"></script>
-  <![endif]-->
-
-  <link href="{{ BASE_PATH }}{{ site.JB.atom_path }}" type="application/atom+xml" rel="alternate" title="Sitewide ATOM Feed">
-  <link href="{{ BASE_PATH }}{{ site.JB.rss_path }}" type="application/rss+xml" rel="alternate" title="Sitewide RSS Feed">
-</head>
-<body>
-
-<div class="jumbotron">
-  <div class="container">
-    <h1 class="text-center">Hello.</h1>
-    <p class="text-center">I'm Kevin, I'm a developer. These are my thoughts.</p>
-  </div>
-</div>
+{% include partials/header.html %}
+{% include partials/homepage/hero.html %}
 
 <div class="container" role="main">
-
   <div class="callout callout-warning">
     <h4>This is a work in progress.</h4>
   </div>
@@ -40,39 +11,17 @@
   </div>
 
   {% for post in site.posts %}
-    <!--<div class="row posts-list">-->
-      <!--<div class="col-lg-1">-->
-        <!--<div class="icon icon-{{ post.icon }}"><span class="glyphicon glyphicon-{{ post.icon }}"></span></div>-->
-      <!--</div>-->
-
-      <!--<div class="col-lg-11">-->
-        <!--<h3><a href="{{ BASE_PATH }}{{ post.url }}">{{ post.title }}</a></h3>-->
-        <!--&lt;!&ndash;<small>{{ post.date | date_to_string }}</small>&ndash;&gt;-->
-        <!--{{ post.tagline }}-->
-      <!--</div>-->
-    <!--</div>-->
-
-  <div class="media posts-list">
-    <a class="pull-left" href="#">
-      <div class="icon icon-{{ post.icon }}"><span class="glyphicon glyphicon-{{ post.icon }}"></span></div>
-    </a>
-    <div class="media-body">
-      <h3><a href="{{ BASE_PATH }}{{ post.url }}">{{ post.title }}</a></h3>
-      <!--<small>08 Mar 2014</small>-->
-      {{ post.tagline }}
+    <div class="media posts-list">
+      <a class="pull-left" href="#">
+        <div class="icon icon-{{ post.icon }}"><span class="glyphicon glyphicon-{{ post.icon }}"></span></div>
+      </a>
+      <div class="media-body">
+        <h3><a href="/{{ BASE_PATH }}{{ post.url }}">{{ post.title }}</a></h3>
+        <!--<small>08 Mar 2014</small>-->
+        {{ post.tagline }}
+      </div>
     </div>
-  </div>
   {% endfor %}
-
-  <footer>
-    <p class="text-right"><small>&copy; 2014. {{ site.author.tagline }}</small></p>
-  </footer>
 </div>
 
-
-{% include JB/analytics %}
-<script src="{{ ASSET_PATH }}/bootstrap/resources/jquery/jquery.min.js"></script>
-<script src="{{ ASSET_PATH }}/bootstrap/resources/bootstrap/js/bootstrap.min.js"></script>
-<script src="{{ ASSET_PATH }}/bootstrap/resources/bootstrap/js/prism.js"></script>
-</body>
-</html>
+{% include partials/footer.html %}
