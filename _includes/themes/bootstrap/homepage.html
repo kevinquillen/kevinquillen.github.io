@@ -40,25 +40,35 @@
   </div>
 
   {% for post in site.posts %}
-    <div class="row posts-list">
-      <div class="col-lg-1">
-        <div class="icon icon-{{ post.icon }}"><span class="glyphicon glyphicon-{{ post.icon }}"></span></div>
-      </div>
+    <!--<div class="row posts-list">-->
+      <!--<div class="col-lg-1">-->
+        <!--<div class="icon icon-{{ post.icon }}"><span class="glyphicon glyphicon-{{ post.icon }}"></span></div>-->
+      <!--</div>-->
 
-      <div class="col-lg-11">
-        <h3><a href="{{ BASE_PATH }}{{ post.url }}">{{ post.title }}</a></h3>
-        <!--<small>{{ post.date | date_to_string }}</small>-->
-        {{ post.tagline }}
-      </div>
+      <!--<div class="col-lg-11">-->
+        <!--<h3><a href="{{ BASE_PATH }}{{ post.url }}">{{ post.title }}</a></h3>-->
+        <!--&lt;!&ndash;<small>{{ post.date | date_to_string }}</small>&ndash;&gt;-->
+        <!--{{ post.tagline }}-->
+      <!--</div>-->
+    <!--</div>-->
+
+  <div class="media posts-list">
+    <a class="pull-left" href="#">
+      <div class="icon icon-{{ post.icon }}"><span class="glyphicon glyphicon-{{ post.icon }}"></span></div>
+    </a>
+    <div class="media-body">
+      <h3><a href="{{ BASE_PATH }}{{ post.url }}">{{ post.title }}</a></h3>
+      <!--<small>08 Mar 2014</small>-->
+      {{ post.tagline }}
     </div>
+  </div>
   {% endfor %}
-</div>
 
   <footer>
     <p class="text-right"><small>&copy; 2014. {{ site.author.tagline }}</small></p>
   </footer>
+</div>
 
-</div> <!-- /container -->
 
 {% include JB/analytics %}
 <script src="{{ ASSET_PATH }}/bootstrap/resources/jquery/jquery.min.js"></script>
