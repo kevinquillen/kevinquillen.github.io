@@ -12,6 +12,21 @@ module.exports = function(grunt) {
     global_vars: global_vars,
     pkg: grunt.file.readJSON('package.json'),
 
+    jekyll: {
+      options: {
+        src: '../',
+        watch: true,
+        serve: true
+      },
+
+      dist: {
+        options: {
+          dest: '../_site',
+          config: '../_config.yml'
+        }
+      }
+    },
+
     sass: {
       dist: {
         options: {
@@ -36,8 +51,9 @@ module.exports = function(grunt) {
   });
 
   grunt.loadNpmTasks('grunt-sass');
+  grunt.loadNpmTasks('grunt-jekyll');
   grunt.loadNpmTasks('grunt-contrib-watch');
 
   grunt.registerTask('build', ['sass']);
-  grunt.registerTask('default', ['watch']);
+  grunt.registerTask('default', ['build', 'watch']);
 }
