@@ -1,8 +1,21 @@
-  <div class="container">
-    <footer>
-      <p class="text-right"><small>&copy; 2014. {{ site.author.tagline }}</small></p>
-    </footer>
+
+<div class="sections">
+  <div class="row" style="height: 200px; background: #33363B; color: #cccccc;">
+    <div class="container">
+      <div class="col-lg-12">
+        <p>this will be a fat footer with some extra information or 'cards'</p>
+      </div>
+    </div>
   </div>
+
+  <div class="row" style="background: #273A45; color: #cccccc;">
+    <div class="container">
+      <footer>
+        <p class="text-center"><small>{{ site.author.tagline }}</small></p>
+      </footer>
+    </div>
+  </div>
+</div>
 
   {% include JB/analytics %}
   <script src="{{ RESOURCE_PATH }}/jquery/jquery.min.js"></script>
