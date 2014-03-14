@@ -2,7 +2,7 @@
 # For more see: http://jekyllrb.com/docs/permalinks/
 permalink: /:categories/:year/:month/:day/:title 
 
-exclude: [".rvmrc", ".rbenv-version", "README.md", "Rakefile", "changelog.md", "node_modules", "scss"]
+exclude: [".rvmrc", ".rbenv-version", "README.md", "Rakefile", "changelog.md", "node_modules", "scss", "bower_components", "grunt"]
 pygments: true
 
 # Themes are encouraged to use these universal variables 
@@ -15,7 +15,7 @@ author :
   email : kevin@inclind.com
   github : kevinquillen
   twitter : kevinquillen
-  tagline: Still coding. Still rocking. Still ranting.
+  tagline: still coding. still laughing. still rocking. still ranting.
 
 # The production_url is only used when full-domain names are needed
 # such as sitemap.txt 
