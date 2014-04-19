@@ -52,18 +52,9 @@ footer {
 div.posts-list {
   margin: 2em 0;
 
-  .media {
-    margin-bottom: 2.2em;
-
-    h3 {
-      margin: 5px 0;
-    }
-
-    a {
-      .pull-left {
-        margin-right: 30px;
-      }
-    }
+  .post {
+    padding-bottom: 1em;
+    border-bottom: 1px solid #ccc;
   }
 }
 

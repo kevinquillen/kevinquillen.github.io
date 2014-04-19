@@ -2,12 +2,12 @@
 layout: post
 category: lessons
 tags:
-  - intro
+  - ajax
   - tutorial
-  - phpunit
-title: Setting up PHPUnit testing in Drupal 7 with PHPStorm.
-tagline: "Drupal 8 ships with PHPUnit tests in its core, replacing SimpleTest. Here is how to get it running in Drupal 7."
-icon: wrench
+  - drupal 7
+title: How to Create Custom AJAX Framework Commands in Drupal 7
+tagline: "Harness the power of the AJAX Framework in Drupal and extend its capabilities."
+icon: cog
 published: true
 ---
 

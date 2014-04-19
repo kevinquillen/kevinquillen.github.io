@@ -2,19 +2,15 @@
 {% include partials/homepage/hero.html %}
 
 <div class="container" role="main">
-  <h2 class="text-center">The latest post should go here, larger than the others, featured.</h2>
-
+  <div class="latest">
+    <h2 class="text-center">How to Create Custom AJAX Framework Commands in Drupal 7</h2>
+  </div>
   <div class="posts-list">
     {% for post in site.posts %}
-      <div class="media">
-        <a class="pull-left" href="#">
-          <div class="icon {{ post.icon }}"><span class="glyphicon glyphicon-{{ post.icon }}"></span></div>
-        </a>
-        <div class="media-body">
-          <h3><a href="{{ post.url }}">{{ post.title }}</a></h3>
-          <!--<small>08 Mar 2014</small>-->
-          {{ post.tagline }}
-        </div>
+      <div class="post">
+        <h4><a href="{{ post.url }}">{{ post.title }}</a></h4>
+        {{ post.date | date: "%B %-d, %Y" }}
+        {{ post.tagline }}
       </div>
     {% endfor %}
   </div>
