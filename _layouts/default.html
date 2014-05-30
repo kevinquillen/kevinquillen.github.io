@@ -1,6 +1,8 @@
----
-theme :
-  name : bootstrap
----
-{% include JB/setup %}
-{% include themes/bootstrap/default.html %}
+{% include partials/header.html %}
+{% include partials/homepage/hero.html %}
+
+<div class="container">
+  {{ content }}
+</div>
+
+{% include partials/footer.html %}
