@@ -1,7 +1,0 @@
-{% capture jbcache %}
-  {% assign BASE_PATH = "/" %}
-  {% assign HOME_PATH = "/" %}
-  {% capture ASSET_PATH %}{{ BASE_PATH }}assets/themes/{{ site.JB.SITE_THEME }}{% endcapture %}
-  {% capture CSS_PATH %}{{ ASSET_PATH }}/css{% endcapture %}
-  {% capture RESOURCE_PATH %}{{ ASSET_PATH }}/resources/{% endcapture %}
-{% endcapture %}{% assign jbcache = nil %}
