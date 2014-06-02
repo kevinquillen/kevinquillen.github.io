@@ -10,8 +10,10 @@ tagline: Still coding. Still rocking. Still ranting.
 author :
   name : Kevin Quillen
   email : kevin@inclind.com
-  github : kevinquillen
-  twitter : kevinquillen
+  drupal : https://drupal.org/kevinquillen
+  github : https://github.com/kevinquillen
+  twitter : https://twitter.com/kevinquillen
+  linkedin : http://www.linkedin.com/kevinquillen
   tagline: still coding. still laughing. still rocking. still ranting.
 
 paginate: 10

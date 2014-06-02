@@ -1,7 +1,9 @@
 ---
 layout: post
 title:  "Welcome to Jekyll!"
+subtitle: This is a post subtitle.
 date:   2014-05-30 17:13:27
+color: blue
 ---
 
 This is an H1
