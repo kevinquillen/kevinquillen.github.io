@@ -76,7 +76,7 @@ hr.star-primary:after {
 header {
     text-align: center;
     color: #fff;
-    background: #18bc9c;
+    background: #3498db;
 }
 
 header .container {
@@ -104,7 +104,7 @@ header .intro-text .skills {
 
 @media(min-width:768px) {
     header .container {
-        padding: 200px 0 100px;
+        padding: 100px 0 100px;
     }
 
     header .intro-text .name {
@@ -435,4 +435,12 @@ footer .footer-below {
     -webkit-transform: rotate(90deg);
     -ms-transform: rotate(90deg);
     transform: rotate(90deg);
+}
+
+div.latest {
+  padding: 25px 0;
+}
+
+div.post-content, {
+  padding: 50px 0;
 }
