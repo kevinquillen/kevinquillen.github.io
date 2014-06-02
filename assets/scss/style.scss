@@ -264,7 +264,7 @@ section {
     -ms-transition: top .3s ease,opacity .3s ease;
     transition: top .3s ease,opacity .3s ease;
   }
-  &::not(:first-child) {
+  &:not(:first-child) {
     padding-left: 14px;
     border-left: 1px solid #eee;
   }
@@ -391,6 +391,27 @@ footer {
   }
 }
 
+div.latest {
+  padding: 25px 0;
+}
+
 div.post-content {
   padding: 50px 0;
+}
+
+footer h3 {
+  margin-bottom: 10px;
+}
+
+.footer-below p {
+  padding: 0 0 5px 0;
+  color: lightgrey;
+}
+
+.footer-top p {
+  font-size: 14px;
+}
+
+.footer-bottom p {
+  font-size: 12px;
 }

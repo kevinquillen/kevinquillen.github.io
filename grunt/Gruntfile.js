@@ -1,11 +1,7 @@
 module.exports = function(grunt) {
-  var theme_name = 'bootstrap';
-
   var global_vars = {
-    theme_name: theme_name,
-    theme_path: '../assets/themes/' + theme_name,
-    theme_css: '../assets/themes/' + theme_name + '/css',
-    theme_scss: '../assets/themes/' + theme_name + '/resources/' + theme_name + '/scss'
+    theme_css: '../assets/css',
+    theme_scss: '../assets/scss'
   }
 
   grunt.initConfig({
@@ -31,11 +27,11 @@ module.exports = function(grunt) {
       dist: {
         options: {
           outputStyle: 'compressed',
-          sourceComments: 'none',
           includePaths: ['<%= global_vars.theme_scss %>']
         },
         files: {
-          '<%= global_vars.theme_css %>/kevinquillen.css': '<%= global_vars.theme_scss %>/styles.scss'
+          '<%= global_vars.theme_css %>/style.css': '<%= global_vars.theme_scss %>/style.scss',
+          '<%= global_vars.theme_css %>/prism.css': '<%= global_vars.theme_scss %>/prism.scss'
         }
       }
     },
@@ -55,5 +51,5 @@ module.exports = function(grunt) {
   grunt.loadNpmTasks('grunt-contrib-watch');
 
   grunt.registerTask('build', ['sass']);
-  grunt.registerTask('default', ['build', 'watch']);
+  grunt.registerTask('default', ['watch']);
 }
