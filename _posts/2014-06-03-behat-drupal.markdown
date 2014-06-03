@@ -6,6 +6,7 @@ body-color: blue
 date:   2014-06-03 14:00:00
 category: general
 body-color: seagreen
+excerpt: Simplify your Drupal testing with Behat, Mink, Vagrant with Behavior Driven Development.
 ---
 
 <h3>The Initiation

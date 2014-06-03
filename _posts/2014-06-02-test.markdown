@@ -1,0 +1,13 @@
+---
+layout: post
+title:  "This is just a test post"
+subtitle: Test post to take up some space.
+body-color: blue
+date:   2014-06-02 14:00:00
+category: coding
+body-color: mustard
+excerpt: Test post to take up some space.
+---
+
+<h3>The Initiation
+<br><small>Why you came.</small></h3>
