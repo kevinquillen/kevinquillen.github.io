@@ -5,9 +5,19 @@ body-color: blue
 
 <div class="col-lg-12">
   <div class="latest">
-    <h2 class="text-center">The Latest</h2>
-    <h3>Super Clear Post Title</h3>
+    <h2 class="text-center">Up and Running with Behat, Drupal, & Vagrant</h2>
     <p class="lead">Text to go here, its engaging and stuff like that. Theres a reason to read on, you know you want to. Blah blah, excedrin excedrin excedrin. Text to go here, its engaging and stuff like that. Theres a reason to read on, you know you want to. Blah blah, excedrin excedrin excedrin.</p>
-    <p><a href="/2014/05/30/welcome-to-jekyll/">Read more &raquo;</a></p>
+    <p><a href="#">Read more &raquo;</a></p>
+  </div>
+
+  <hr class="star-light">
+
+  <div class="posts-list">
+    {% for post in site.posts %}
+    <div class="post">
+      <h4><a href="{{ post.url }}">{{ post.title }}</a> <br><small>{{ post.subtitle }}</small></h4>
+      <p>{{ post.date | date: "%B %-d, %Y" }}</p>
+    </div>
+    {% endfor %}
   </div>
 </div>

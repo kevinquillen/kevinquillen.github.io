@@ -1,11 +1,20 @@
 $seagreen: #18bc9c;
 $lightblue: #3498db;
 $coral: lightcoral;
+$brightred: #e74c3c;
+$mustard: #f39c12;
+$slate: #1e2a36;
 
 body {
   &.seagreen {
     header {
       background: $seagreen;
+    }
+
+    h1, h2, h3, h4, h5, h6, p {
+      a {
+        color: $seagreen;
+      }
     }
   }
 
@@ -13,11 +22,59 @@ body {
     header {
       background: $lightblue;
     }
+
+    h1, h2, h3, h4, h5, h6, p {
+      a {
+        color: $lightblue;
+      }
+    }
   }
 
   &.coral {
     header {
       background: $coral;
+    }
+
+    h1, h2, h3, h4, h5, h6, p {
+      a {
+        color: $coral;
+      }
+    }
+  }
+
+  &.brightred {
+    header {
+      background: $brightred;
+    }
+
+    h1, h2, h3, h4, h5, h6, p {
+      a {
+        color: $brightred;
+      }
+    }
+  }
+
+  &.mustard {
+    header {
+      background: $mustard;
+    }
+
+    h1, h2, h3, h4, h5, h6, p {
+      a {
+        color: $mustard;
+      }
+    }
+  }
+
+  &.slate {
+    header {
+      background: $slate;
+    }
+
+    h1, h2, h3, h4, h5, h6, p {
+      a {
+        color: $slate;
+      }
     }
   }
 }
