@@ -2,11 +2,11 @@
 layout: post
 title:  "Up and Running with Behat, Drupal, & Vagrant"
 subtitle: There be no dragons here, I promise.
-body-color: blue
 date:   2014-06-03 14:00:00
 category: general
 body-color: seagreen
-excerpt: Simplify your Drupal testing with Behat, Mink, Vagrant with Behavior Driven Development.
+published: false
+excerpt: Behat is a PHP implementation of the Gherkin language, which powered Cucumber for Ruby. It provides a way to tell the system in plain English how to go about testing your feature points as if it were the user doing it. Not only is this a great way to automate tests, it cuts down hours of tedious clicking by a human to say that something is working or not.
 ---
 
 <h3>The Initiation
@@ -48,15 +48,15 @@ Let's take the simplest user test we can think of in Drupal. A site administrato
 do this in Drupal manually, it's very straightforward. But, let's get Behat to do it for us, and tell us the results:
 
 <pre class="language-markup"><code class="language-gherkin">
-  Feature: Content Management
-    When I log into the website
-    As an administrator
-    I should be able to create, edit, and delete page content
+Feature: Content Management
+  When I log into the website
+  As an administrator
+  I should be able to create, edit, and delete page content
 
-    Scenario: An administrative user should be able create page content
-      Given I am logged in as a user with the "administrator" role
-      When I go to "node/add/page"
-      Then I should not see "Access denied"
+  Scenario: An administrative user should be able create page content
+    Given I am logged in as a user with the "administrator" role
+    When I go to "node/add/page"
+    Then I should not see "Access denied"
 </code></pre>
 
 Now, we execute Behat from the command line:
@@ -97,10 +97,93 @@ folks... wish I could help you too.
 - An IDE (I live and die by [PHPStorm](http://www.jetbrains.com/phpstorm/))
 - Terminal/command line access
 
+#### What we'll be using
+
+- Vagrant LAMP box
+- Behat
+- Mink
+- [Drupal Behat Extension](http://dspeak.com/drupalextension/intro.html)
+
+The [Drupal Behat Extension](http://dspeak.com/drupalextension/intro.html) is what kicked off my entire foray into the world of Behat.
+
+With the extension, it adds lots of prebuilt step definitions for you that are ready to use. A step definition is what Behat uses to evaluate
+your expressions, and we will look at those in a little bit.
+
 First, if you have a Vagrant LAMP stack going, great. If not, you may want to grab one. There are many online to pick from or you can make
 your own box setup at [PuPHPet](https://puphpet.com/). I don't want to get into the nitty gritty of setting up Vagrant itself - there are
 already many posts on the subject. Everything we have will run on Vagrant which is tuned to be just like our production environments on our
 host server.
 
+##### Append your Vagrantfile
+
+One thing we need to do is append the end of your Vagrantfile to execute a shell script. This script will setup the necessary packages
+needed on the virtual machine to run Selenium tests.
+
+##### Install Composer
+
 Secondly, install [Composer](https://getcomposer.org/). [Composer](https://getcomposer.org/) is what will bring the necessary third party
-PHP libraries together so we can run tests.
+PHP libraries together so we can run tests. Install [Composer](https://getcomposer.org/) globally so it can be run from any directory.
+
+Once you have [Composer](https://getcomposer.org/) installed, we need to provide a simple composer.json file telling it what libraries
+we need.
+
+<pre class="language-markup">
+<code class="language-javascript">
+{
+  "name": "YOURNAME/PROJECTNAME",
+  "description": "PROJECTNAME",
+  "require": {
+    "behat/mink": "1.5.*@stable",
+    "behat/mink-goutte-driver": "*",
+    "behat/mink-selenium2-driver": "*",
+    "drupal/drupal-extension": "*"
+  }
+}
+</code>
+</pre>
+
+This file should sit in the root of your project (outside of the docroot). Next, we are going to tell Composer to fetch and install these
+packages.
+
+In terminal:
+
+<pre class="language-markup">
+<code class="language-bash">
+composer install
+</code>
+</pre>
+
+That's it! It will process and download the libraries to a new 'vendor' folder. Add this folder to your .gitignore - it's not something you
+want to have version controlled.
+
+##### Configure Behat
+
+Now, we need to create a simple config file for Behat. Create a file in your project root and name it 'behat.yml'.
+
+Inside of the behat.yml file, paste in this basic config:
+
+<pre class="language-markup">
+<code class="language-javascript">
+default:
+  context:
+    class: 'FeatureContext'
+  paths:
+    features: 'features'
+    bootstrap: 'features/bootstrap'
+  extensions:
+    Behat\MinkExtension\Extension:
+      goutte: ~
+      javascript_session: selenium2
+      selenium2:
+        wd_host: http://VHOST_SERVER_ALIAS:4444/wd/hub
+      base_url: http://VHOST_SERVER_ALIAS
+    Drupal\DrupalExtension\Extension:
+      blackbox: ~
+      api_driver: 'drupal'
+      drupal:
+        drupal_root: '/path/to/your/project/docroot'
+</code>
+</pre>
+
+Above, replace VHOST_SERVER_ALIAS with your local development URL. If your local URL is local.mysite.com, enter that. This hooks up
+the Selenium2 driver and enables it to browse and talk to your site.

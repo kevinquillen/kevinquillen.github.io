@@ -1,0 +1,34 @@
+---
+layout: post
+title:  "Hey, I've got a new site."
+subtitle: Reborn more times than Doctor Who.
+body-color: blue
+date:   2014-06-01 14:00:00
+category: general
+color: blue
+excerpt: For the record... The Tenth Doctor is my favorite. Anyway... thanks to the brilliant people at GitHub - I am afforded free hosting with GitHub Pages, which leverages Jekyll to compiled and generate a static site.
+---
+
+**Posted on: {{ page.date | date: "%B %-d, %Y" }}**
+
+Yes.
+
+Every now and then, I get an itch to have a new site. Over the years, I became tired of being tied to Wordpress, Octopress and Tumblr.
+
+Finally, thanks to the brilliant people at [GitHub](http://www.github.com) - I am afforded free hosting with GitHub Pages, which leverages
+Jekyll to compiled and generate a static site.
+
+I know I maintain the official [Zurb Foundation](https://drupal.org/project/zurb-foundation) implementation for
+[Drupal](http://drupal.org), but I chose to use [Bootstrap](http://getbootstrap.com) for a bit of variety. I feel it best represents my
+personality, plus, it's fun and readable on any device.
+
+Let the posts fly.
+
+##### Wait! What are you going to talk about?
+
+Oh, right. Well, mainly code related subjects for both the back and frontend, and sometimes about tools like Git. Since this is what I do every
+single day, that's what I'm gonna lay down. Dig it.
+
+##### Also, I don't know you. Or do I?
+
+That's okay. The internet is large and vast, I am just one voice - but if you don't know me, [read on](/about).
