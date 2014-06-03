@@ -185,5 +185,5 @@ default:
 </code>
 </pre>
 
-Above, replace VHOST_SERVER_ALIAS with your local development URL. If your local URL is local.mysite.com, enter that. This hooks up
-the Selenium2 driver and enables it to browse and talk to your site.
+Above, replace VHOST_SERVER_ALIAS with your local development URL. If your local URL is <code>local.mysite.com</code>, enter that. This hooks up
+the Selenium driver and enables it to browse and talk to your site.

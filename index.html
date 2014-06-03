@@ -6,7 +6,8 @@ body-color: blue
 <div class="col-lg-12">
   {% for post in site.posts limit:1 %}
     <div class="latest">
-      <h2 class="text-center"><a href="{{ post.url }}" title="{{ post.title }}">{{ post.title }}</a></h2>
+      <h2 class="text-center"><a href="{{ post.url }}" title="{{ post.title }}">{{ post.title }}</a>
+      <br><small>{{ post.subtitle }}</small></h2>
       <p class="lead">{{ post.excerpt }}</p>
       <p><a href="{{ post.url }}">Read more &raquo;</a></p>
     </div>
