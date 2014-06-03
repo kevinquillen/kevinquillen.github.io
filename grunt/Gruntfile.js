@@ -31,6 +31,7 @@ module.exports = function(grunt) {
         },
         files: {
           '<%= global_vars.theme_css %>/style.css': '<%= global_vars.theme_scss %>/style.scss',
+          '<%= global_vars.theme_css %>/colors.css': '<%= global_vars.theme_scss %>/colors.scss',
           '<%= global_vars.theme_css %>/prism.css': '<%= global_vars.theme_scss %>/prism.scss'
         }
       }

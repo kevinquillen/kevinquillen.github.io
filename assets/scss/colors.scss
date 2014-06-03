@@ -1,0 +1,23 @@
+$seagreen: #18bc9c;
+$lightblue: #3498db;
+$coral: lightcoral;
+
+body {
+  &.seagreen {
+    header {
+      background: $seagreen;
+    }
+  }
+
+  &.blue {
+    header {
+      background: $lightblue;
+    }
+  }
+
+  &.coral {
+    header {
+      background: $coral;
+    }
+  }
+}
