@@ -12,16 +12,22 @@ excerpt: Simplify your Drupal testing with Behat, Mink, Vagrant with Behavior Dr
 <h3>The Initiation
 <br><small>Why you came.</small></h3>
 
-<p>Alright. This is it. You're here because you've heard of this mysterious 'Behat' while searching for best practices in
-testing Drupal.</p>
+Alright. This is it. You're here because you've heard of this mysterious 'Behat' while searching for best practices in
+testing Drupal.
 
-<p>Up through Drupal 7, core and contrib relied on a method of testing leveraging the SimpleTest library. While it has served a
-purpose, some of us need a much faster and clearer way of testing.</p>
+Up through Drupal 7, core and contrib relied on a method of testing leveraging the SimpleTest library. While it has served a
+purpose, some of us need a much faster and clearer way of testing.
 
-#### But... what is Behat really?
+#### Wait, so Behat is... ?
+
+From the official Behat site:
+
+>Behat is a tool that makes behavior driven development (BDD) possible. With BDD, you write human-readable stories that describe the behavior of your application. These stories can then be auto-tested against your application. And yes, it’s as cool as it sounds!
+
+#### Right... but what is Behat really?
 
 <h3>The Setup
-<br><small>Okay, there <em>may</em> be a few dragons here. Suit up, prepare for battle.</small></h3>
+<br><small>Okay, there <em>may</em> be a few dragons here. Let's slay them.</small></h3>
 
 <pre class="language-markup"><code class="language-gherkin">
   @api
