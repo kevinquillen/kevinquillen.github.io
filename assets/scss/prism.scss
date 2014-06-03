@@ -1,3 +1,4 @@
+/* http://prismjs.com/download.html?themes=prism-okaidia&languages=markup+css+clike+javascript+php+php-extras+coffeescript+scss+bash+c+cpp+python+sql+http+ruby+gherkin+aspnet&plugins=line-highlight+line-numbers */
 /**
  * okaidia theme for JavaScript, CSS and HTML
  * Loosely based on Monokai textmate theme by http://www.monokai.nl/
@@ -38,7 +39,7 @@ pre[class*="language-"] {
   -moz-hyphens: none;
   -ms-hyphens: none;
   hyphens: none;
-  padding: 1em;
+  padding: 1em 1em 2em .5em;
   margin: .5em 0;
   overflow: auto;
   border-radius: 0.3em;
@@ -122,7 +123,7 @@ pre[data-line] {
   right: 0;
   padding: inherit 0;
   margin-top: 1em;
-  /* Same as .prismâ€™s padding-top */
+  /* Same as .prism’s padding-top */
   background: hsla(24, 20%, 50%, 0.08);
   background: -moz-linear-gradient(left, hsla(24, 20%, 50%, 0.1) 70%, hsla(24, 20%, 50%, 0));
   background: -webkit-linear-gradient(left, hsla(24, 20%, 50%, 0.1) 70%, hsla(24, 20%, 50%, 0));
@@ -184,6 +185,7 @@ pre.line-numbers {
   font-size: 100%;
   left: -3.8em;
   width: 3em;
+  /* works for line-numbers below 1000 lines */
   letter-spacing: -1px;
   border-right: 1px solid #999;
   -webkit-user-select: none;
