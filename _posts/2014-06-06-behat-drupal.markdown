@@ -2,13 +2,24 @@
 layout: post
 title:  "Up and Running with Behat, Drupal, & Vagrant"
 subtitle: There be no dragons here, I promise.
-date:   2014-06-03 14:00:00
+date:   2014-06-06 14:00:00
 category: testing
 body-color: seagreen
-published: false
 excerpt: Behat is a PHP implementation of the Gherkin language, which powered Cucumber for Ruby. It provides a way to tell the system in plain English how to go about testing your feature points as if it were the user doing it. Not only is this a great way to automate tests, it cuts down hours of tedious clicking by a human to say that something is working or not.
 ---
 
+<div class="panel panel-warning">
+  <div class="panel-heading">
+    <h3 class="panel-title">Whoa there!</h3>
+  </div>
+  <div class="panel-body">
+    This post will be applicable to you if you develop within a Vagrant virtual environment in OSX/Linux. If not, or you are a Windows user,
+    it may not be much help! But if you're curious anyway, read on.
+  </div>
+</div>
+
+<br>
+<hr>
 <h3>The Initiation
 <br><small>Why you came.</small></h3>
 
@@ -117,15 +128,73 @@ host server.
 ##### Append your Vagrantfile
 
 One thing we need to do is append the end of your Vagrantfile to execute a shell script. This script will setup the necessary packages
-needed on the virtual machine to run Selenium tests.
+needed on the virtual machine to run Selenium tests. The reason we implement this shell script instead of downloading the jar file directly is so
+that the less technical people on distributed teams do not have difficulty running it - Vagrant will take care of that for us.
+
+Create a setup.sh file in your Vagrant project and paste in the following:
+
+<pre class="language-markup">
+<code class="language-bash">
+#!/bin/sh
+#set -e
+
+if [ -e /.installed ]; then
+  echo 'Already installed.'
+
+else
+  echo ''
+  echo 'INSTALLING'
+  echo '----------'
+
+  # Install Java, Firefox, Xvfb, and unzip
+  apt-get -y install openjdk-7-jre-headless firefox xvfb unzip
+
+  wget "http://selenium-release.storage.googleapis.com/2.42/selenium-server-standalone-2.42.1.jar"
+  mv selenium-server-standalone-2.42.1.jar /usr/local/bin
+
+  # So that running `vagrant provision` doesn't redownload everything
+  touch /.installed
+fi
+
+# Release old locks
+echo "Releasing old XVFB locks from /tmp..."
+cd /tmp
+sudo rm -rf .X*-lock
+
+echo "Starting Selenium Server. Default screen resolution: 1280x1024."
+cd /usr/local/bin
+DISPLAY=:1 xvfb-run --server-args="-screen 0 1280x1024x8" java -jar ./selenium-server-standalone-2.42.1.jar &amp;
+
+echo "Give Selenium Server a few minutes to fireup, then run your BDD tests."
+</code>
+</pre>
+
+This looks like a lot - but really, the script only needs to run this once. It goes through and downloads Java and Firefox and installs it
+into the virtual machine. When Selenium releases new .jar files, update the URL it is pointing at.
+
+At the top, the <code>.installed</code> file prevents reinstallation on every <code>vagrant provision</code>. But you can easily ssh into
+the machine, delete this file, and it will run the whole process again on the next revision.
+
+Other packages, like <code>xvfb</code> enable the virtual machine to run a headless version of Firefox so Selenium can use it as a client. Now,
+all you need to do is share your Vagrantfile and Puppet/chef/Ansible config with your team, and they now have this in their arsenal too.
+
+<br>
+<hr>
+<h2 class="text-center">Whoa whoa whoa damn, I need a break!</h2>
+<p class="text-center">Me too. Grab a drink or coffee. We are halfway there now.</p>
+<hr>
+<br>
+
+Okay. Ready? It's all downhill from here.
 
 ##### Install Composer
 
 Secondly, install [Composer](https://getcomposer.org/). [Composer](https://getcomposer.org/) is what will bring the necessary third party
-PHP libraries together so we can run tests. Install [Composer](https://getcomposer.org/) globally so it can be run from any directory.
+PHP libraries together so we can run tests. Install [Composer](https://getcomposer.org/) globally so it can be run from any directory on
+your machine.
 
 Once you have [Composer](https://getcomposer.org/) installed, we need to provide a simple composer.json file telling it what libraries
-we need.
+we need. If you have a composer file already, just add to it.
 
 <pre class="language-markup">
 <code class="language-javascript">
@@ -187,3 +256,38 @@ default:
 
 Above, replace VHOST_SERVER_ALIAS with your local development URL. If your local URL is <code>local.mysite.com</code>, enter that. This hooks up
 the Selenium driver and enables it to browse and talk to your site.
+
+Remember the <code>setup.sh</code> file above? We did that so we can use the virtual machine alias in the behat.yml config above instead of
+using <code>localhost</code> like a lot of tutorials often tell you to use. Behat will execute Selenium2 tests on the virtual machine now
+just like any other tests with Goutte, Zombie, or PhantomJS.
+
+##### Where are we at this point?
+
+We (or you) should now have Composer and Behat successfully installed.
+
+##### How can I tell?
+
+Navigate to your project root in terminal. At the prompt, type:
+
+<code>vendor/bin/behat --init</code>
+
+Behat should generate a features folder in the root and place a bootstrap and basic context there. If it does, great! If not, retrace your
+steps to see if you missed something.
+
+Now, for the magic. Composer pulled in an extension for Drupal and Behat. In order to leverage it, we need to tweak one line of code in
+the <code>FeatureContext.php</code> file in features/bootstrap:
+
+<pre class="language-markup"><code class="language-php">
+class FeatureContext extends \Drupal\DrupalExtension\Context\DrupalContext
+</code></pre>
+
+This hooks into the Drupal Behat extension, and grants you access to dozens of step definitions to use in your tests. To see them, type:
+
+<code>vendor/bin/behat -dl</code>
+
+This list is the list of step definitions you can use in your tests that *require absolutely no code to make work*.
+
+I am going to have some mercy on you now, and let you review what we just covered. Get what we have here up and running, and try the example test back
+at the start of the article. In the next post, I will go deeper into Behat tests and custom step definitions.
+
+**Questions?** [@kevinquillen](https://twitter.com/kevinquillen)
