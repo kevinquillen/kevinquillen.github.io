@@ -18,7 +18,6 @@ excerpt: Behat is a PHP implementation of the Gherkin language, which powered Cu
   </div>
 </div>
 
-<br>
 <hr>
 <h3>The Initiation
 <br><small>Why you came.</small></h3>
