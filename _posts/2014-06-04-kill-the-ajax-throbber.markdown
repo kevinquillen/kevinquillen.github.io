@@ -8,6 +8,8 @@ body-color: coral
 excerpt: There are things I love about Drupal. There are also things I flat out hate about Drupal, too. One of them is the throbber.gif activity indicator. Guys, we can do better. Let's add some shine.
 ---
 
+**Posted on: {{ page.date | date: "%B %-d, %Y" }}**
+
 Every time I see the throbber.gif appear it pains me, because with some simple changes, we can make the feel of it so much better.
 
 ##### Y U NO LIKE POOR LITTLE GIF?
