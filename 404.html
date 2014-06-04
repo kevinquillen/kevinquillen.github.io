@@ -9,4 +9,21 @@ subtitle: But that's okay - there are other things to look at.
 
 <p>Looks like you're trying to get to something that doesn't exist.</p>
 
-<p>Here, <a href="/">go to the homepage</a> and get back on track.</p>
+<p>You can <a href="/">go to the homepage</a> and get back on track or check out some of the recent posts below.</p>
+
+<hr class="star-light">
+
+<div class="posts-list">
+  {% for post in site.posts limit:10 %}
+  <div class="col-lg-12">
+    <article>
+      <div class="col-lg-2">
+        <h5>{{ post.date | date: "%B %-d, %Y" }} <br><small>{{ post.category }}</small></h5>
+      </div>
+      <div class="col-lg-7 post">
+        <h4><a href="{{ post.url }}">{{ post.title }}</a> <br><small>{{ post.subtitle }}</small></h4>
+      </div>
+    </article>
+  </div>
+  {% endfor %}
+</div>

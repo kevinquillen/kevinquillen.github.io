@@ -3,7 +3,7 @@ layout: post
 title:  "Up and Running with Behat, Drupal, & Vagrant"
 subtitle: There be no dragons here, I promise.
 date:   2014-06-03 14:00:00
-category: general
+category: testing
 body-color: seagreen
 published: false
 excerpt: Behat is a PHP implementation of the Gherkin language, which powered Cucumber for Ruby. It provides a way to tell the system in plain English how to go about testing your feature points as if it were the user doing it. Not only is this a great way to automate tests, it cuts down hours of tedious clicking by a human to say that something is working or not.

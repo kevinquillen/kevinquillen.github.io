@@ -1,0 +1,10 @@
+---
+layout: post
+title:  "The title."
+date:   2014-06-02 14:00:00
+category: javascript
+body-color: coral
+published: false
+---
+
+Post content goes here.

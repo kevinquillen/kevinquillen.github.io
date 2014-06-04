@@ -80,8 +80,7 @@ header {
   text-align: center;
   color: #fff;
   .container {
-    padding-top: 100px;
-    padding-bottom: 50px;
+    padding: 50px 0;
   }
   img {
     display: block;
@@ -105,7 +104,7 @@ header {
 @media (min-width: 768px) {
   header {
     .container {
-      padding: 100px 0 100px;
+      padding: 50px 0;
     }
     .intro-text {
       .name {
@@ -248,7 +247,7 @@ footer {
 }
 
 div.latest {
-  padding: 25px 0;
+  padding: 20px 0;
 
   h1, h2, h3, h4, h5, h6 {
     margin: 21px 0;
@@ -292,5 +291,5 @@ footer h3 {
 }
 
 div.posts-list {
-  padding: 20px 0;
+  min-height: 100px;
 }
