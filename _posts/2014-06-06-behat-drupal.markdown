@@ -291,3 +291,5 @@ I am going to have some mercy on you now, and let you review what we just covere
 at the start of the article. In the next post, I will go deeper into Behat tests and custom step definitions.
 
 **Questions?** [@kevinquillen](https://twitter.com/kevinquillen)
+
+**Posted on: {{ page.date | date: "%B %-d, %Y" }}**

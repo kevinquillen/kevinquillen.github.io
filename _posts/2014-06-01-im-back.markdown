@@ -9,8 +9,6 @@ color: blue
 excerpt: For the record... The Tenth Doctor is my favorite. Anyway... thanks to the brilliant people at GitHub - I am afforded free hosting with GitHub Pages, which leverages Jekyll to compiled and generate a static site.
 ---
 
-**Posted on: {{ page.date | date: "%B %-d, %Y" }}**
-
 Yes.
 
 Every now and then, I get an itch to have a new site. Over the years, I became tired of being tied to Wordpress, Octopress and Tumblr.
@@ -32,3 +30,5 @@ single day, that's what I'm gonna lay down. Dig it.
 ##### Also, I don't know you. Or do I?
 
 That's okay. The internet is large and vast, I am just one voice - but if you don't know me, [read on](/about).
+
+**Posted on: {{ page.date | date: "%B %-d, %Y" }}**
