@@ -72,5 +72,3 @@ AJAX is happening. You would be right. However I am only using this script on on
 
 Otherwise, I would have more checks and conditions to know that I am working on the correct form. If I wanted to add on more here, I certainly
 could. All you would need to do is track your selectors in the settings, so you can set the animations or other effects that you want.
-
-**Posted on: {{ page.date | date: "%B %-d, %Y" }}**

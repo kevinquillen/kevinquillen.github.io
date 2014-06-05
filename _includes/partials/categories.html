@@ -1,0 +1,23 @@
+{% if page.category %}
+  <hr>
+  <h5 class="text-center">You may also want to check out:</h5>
+
+
+      <div class="posts-list">
+        {% for post in site.posts reversed limit: 3 %}
+          {% if post.category == page.category and post.url != page.url %}
+        <div class="col-lg-4">
+          <article>
+            <div class="col-lg-2">
+              <h5>{{ post.date | date: "%B %-d, %Y" }} <br><small>{{ post.category }}</small></h5>
+            </div>
+            <div class="col-lg-7 post">
+              <h4><a href="{{ post.url }}" title="{{ post.title }}">{{ post.title }}</a> <br><small>{{ post.subtitle }}</small></h4>
+            </div>
+          </article>
+        </div>
+        {% endif %}
+        {% endfor %}
+      </div>
+
+{% endif %}

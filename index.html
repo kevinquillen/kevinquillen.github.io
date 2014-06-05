@@ -9,7 +9,7 @@ body-color: blue
       <h2 class="text-center"><a href="{{ post.url }}" title="{{ post.title }}">{{ post.title }}</a>
       <br><small>{{ post.subtitle }}</small></h2>
       <p class="lead">{{ post.excerpt }}</p>
-      <p><a href="{{ post.url }}">Read more &raquo;</a></p>
+      <p><a href="{{ post.url }}" title="{{ post.title }}">Read more &raquo;</a></p>
     </div>
   {% endfor %}
 
@@ -24,7 +24,7 @@ body-color: blue
               <h5>{{ post.date | date: "%B %-d, %Y" }} <br><small>{{ post.category }}</small></h5>
             </div>
             <div class="col-lg-7 post">
-              <h4><a href="{{ post.url }}">{{ post.title }}</a> <br><small>{{ post.subtitle }}</small></h4>
+              <h4><a href="{{ post.url }}" title="{{ post.title }}">{{ post.title }}</a> <br><small>{{ post.subtitle }}</small></h4>
             </div>
           </article>
         </div>

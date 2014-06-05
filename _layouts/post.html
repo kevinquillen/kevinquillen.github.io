@@ -4,6 +4,22 @@
 <div class="container">
   <div class="post-content">
     {{ content }}
+    <hr>
+    <!--<p><strong>Posted on:</strong> {{ page.date | date: "%B %-d, %Y" }}</p>-->
+    <!--{% if page.category.size > 0 %}-->
+    <!--<p><strong>Category:</strong> {{ page.category | capitalize }}</p>-->
+    <!--{% endif %}-->
+    <!--{% if page.tags.size > 0 %}-->
+      <!--<p><strong>Tagged with:</strong> {{ page.tags | array_to_sentence_string }}</p>-->
+    <!--{% endif %}-->
+    <ul class="pager">
+      {% if page.previous != nil %}
+        <li class="previous"><a href="{{ page.previous.url }}" title="{{ page.previous.title }}">← {{ page.previous.title }}</a></li>
+      {% endif %}
+      {% if page.next != nil %}
+        <li class="next"><a href="{{ page.next.url }}" title="{{ page.next.title }}">{{ page.next.title }} →</a></li>
+      {% endif %}
+    </ul>
   </div>
 </div>
 

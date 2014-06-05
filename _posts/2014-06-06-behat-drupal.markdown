@@ -3,8 +3,9 @@ layout: post
 title:  "Up and Running with Behat, Drupal, & Vagrant"
 subtitle: There be no dragons here, I promise.
 date:   2014-06-06 14:00:00
-categories: bdd
+category: bdd
 body-color: seagreen
+tags : [how-to, jekyll]
 excerpt: Behat is a PHP implementation of the Gherkin language, which powered Cucumber for Ruby. It provides a way to tell the system in plain English how to go about testing your feature points as if it were the user doing it. Not only is this a great way to automate tests, it cuts down hours of tedious clicking by a human to say that something is working or not.
 ---
 
@@ -26,13 +27,14 @@ Alright. This is it. You're here because you've heard of this mysterious 'Behat'
 testing Drupal.
 
 Up through Drupal 7, core and contrib relied on a method of testing leveraging the SimpleTest library. While it has served a
-purpose, some of us need a much faster and clearer way of testing. Also, if you're a designer, you're probably looking for a easier
-point of entry to not only testing your front or backend UI, but contributing to testing functional (behaviors) pieces of the application. You
+purpose, some of us need a much faster and clearer way of testing.
+
+If you're a designer, you're probably looking for a easier point of entry to not only testing your front or backend UI, but contributing to testing functional (behaviors) pieces of the application. You
 may not have the best programming chops, or maybe OOP scares you.
 
-Or simply, *maybe you just need to get shit done without much hassle*.
+Or, like me, *you just need to get shit done without much hassle*.
 
-Writing tests where you look to test behaviors from a user perspective is called **"Behavior Driven Development"**. Adding up multiple
+Writing tests where you look to test behaviors from a user perspective is called **"[Behavior Driven Development](http://en.wikipedia.org/wiki/Behavior-driven_development)"**. Adding up multiple
 tests together into feature testing forms a solid group of user acceptance tests. When the tests pass, you know you are facilitating the
 user stories of the features you were asked to implement. You don't have to go back to your QA team or project manager and say "okay I'm done"
 and wait for them to click around for hours and tell you things are still missing.
@@ -290,5 +292,3 @@ I am going to have some mercy on you now, and let you review what we just covere
 at the start of the article. In the next post, I will go deeper into Behat tests and custom step definitions.
 
 **Questions?** [@kevinquillen](https://twitter.com/kevinquillen)
-
-**Posted on: {{ page.date | date: "%B %-d, %Y" }}**

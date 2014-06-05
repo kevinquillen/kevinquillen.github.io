@@ -16,6 +16,10 @@ body {
         color: $seagreen;
       }
     }
+
+    .pager a {
+      background-color: $seagreen;
+    }
   }
 
   &.blue {
@@ -27,6 +31,10 @@ body {
       a {
         color: $lightblue;
       }
+    }
+
+    .pager a {
+      background-color: $lightblue;
     }
   }
 
@@ -40,6 +48,10 @@ body {
         color: $coral;
       }
     }
+
+    .pager a {
+      background-color: $coral;
+    }
   }
 
   &.brightred {
@@ -51,6 +63,10 @@ body {
       a {
         color: $brightred;
       }
+    }
+
+    .pager a {
+      background-color: $brightred;
     }
   }
 
@@ -64,6 +80,10 @@ body {
         color: $mustard;
       }
     }
+
+    .pager a {
+      background-color: $mustard;
+    }
   }
 
   &.slate {
@@ -75,6 +95,10 @@ body {
       a {
         color: $slate;
       }
+    }
+
+    .pager a {
+      background-color: $slate;
     }
   }
 }

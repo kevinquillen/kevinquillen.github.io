@@ -5,7 +5,6 @@ subtitle: Reborn more times than Doctor Who.
 body-color: blue
 date:   2014-06-01 14:00:00
 category: general
-color: blue
 excerpt: For the record... The Tenth Doctor is my favorite. Anyway... thanks to the brilliant people at GitHub - I am afforded free hosting with GitHub Pages, which leverages Jekyll to compiled and generate a static site.
 ---
 
@@ -30,5 +29,3 @@ single day, that's what I'm gonna lay down. Dig it.
 ##### Also, I don't know you. Or do I?
 
 That's okay. The internet is large and vast, I am just one voice - but if you don't know me, [read on](/about).
-
-**Posted on: {{ page.date | date: "%B %-d, %Y" }}**
