@@ -5,7 +5,7 @@ subtitle: Take your first step into a larger world.
 date:   2014-06-08 14:00:00
 category: bdd
 body-color: darkgreen
-published: false
+excerpt: We all have at some point or another faced projects where wasted minutes and/or hours on regressions or redo work not only eat into the current project budget, but hurt long term numbers too on the books. Fortunately, we can crush this leveraging Behat and covering our bases with tests, and everyone goes home happy.
 ---
 
 How many times have you faced this?
@@ -254,4 +254,57 @@ Given /^(?:|I )am on "(?P&lt;page&gt;[^"]+)"$/
  Then /^show last response$/
 </code></pre>
 
-Holy moly. Right off the bat, we have lots of viable definitions to use to write tests with.
+Holy moly. We have lots of viable definitions to use to write tests with.
+
+Each one of these are usable just the way they are written. For instance, if you wanted to check for "Welcome!" on the homepage, there are
+two steps provided that can do that already, <code>Given /^(?:|I )am on (?:|the )homepage$/</code> and <code>Then /^(?:I|I should) see the text "(?P&lt;text&gt;[^"]\*)"$/</code>.
+Here's how:
+
+<pre class="language-markup"><code class="language-gherkin">
+  Scenario: A user should see "Welcome!" on the homepage
+    Given I am on the homepage
+    Then I should see the text "Welcome!"
+</code></pre>
+
+Nothing to it, right? That's the entire test. Behat matches statements with regular expressions and passes quoted text as arguments to their
+respective step definitions.
+
+##### How does this black magic work?
+
+Step definitions like this are already provided to you out of the box. They are defined in their respective providing classes, and Behat matches
+the statements back to annotated code comments preceding the PHP methods that execute them. Here is <code>Given /^(?:|I )am on (?:|the )homepage$/</code>:
+
+<pre class="language-markup"><code class="language-php">
+/**
+ * Opens homepage.
+ *
+ * @Given /^(?:|I )am on (?:|the )homepage$/
+ * @When /^(?:|I )go to (?:|the )homepage$/
+ */
+public function iAmOnHomepage()
+{
+    $this->getSession()->visit($this->locatePath('/'));
+}
+</code></pre>
+
+When the PHP method is used, the Behat driver (the mechanism that simulates client / browser interaction) directs the client to "/" or the root document page
+of the site. Make sense now?
+
+Here's <code>Then /^(?:I|I should) see the text "(?P&lt;text&gt;[^"]\*)"$/</code>:
+
+<pre class="language-markup"><code class="language-php">
+/**
+ * @Then /^(?:I|I should) see the text "(?P&lt;text&gt;[^"]\*)"$/
+ */
+public function assertTextVisible($text) {
+  // Use the Mink Extension step definition.
+  return new Given("I should see text matching \"$text\"");
+}
+</code></pre>
+
+An argument passed to this function, which is the quoted string <code>"Welcome!"</code>. If you followed the class,
+you can see that this step is generated dynamically for Mink, and the statement is then evaluated against the page contents.
+
+Before we get deeper into step definitions, backgrounds, contexts, Selenium, and region selectors, take some time to build basic tests with the list of
+step definitions above. Get them to pass and get them to fail. Build confidence in the fact that Behat is your second set of eyes and a
+helper in facilitating feature development.
