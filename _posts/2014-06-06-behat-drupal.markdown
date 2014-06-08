@@ -173,7 +173,7 @@ This looks like a lot - but really, the script only needs to run this once. It g
 into the virtual machine. When Selenium releases new .jar files, update the URL it is pointing at.
 
 At the top, the <code>.installed</code> file prevents reinstallation on every <code>vagrant provision</code>. But you can easily ssh into
-the machine, delete this file, and it will run the whole process again on the next revision.
+the machine, delete this file, and it will run the whole process again on the next provision.
 
 Other packages, like <code>xvfb</code> enable the virtual machine to run a headless version of Firefox so Selenium can use it as a client. Now,
 all you need to do is share your Vagrantfile and Puppet/chef/Ansible config with your team, and they now have this in their arsenal too.
