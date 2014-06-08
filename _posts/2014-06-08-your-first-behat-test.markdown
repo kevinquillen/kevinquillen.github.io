@@ -125,9 +125,6 @@ Feature: Content Management
 
 Running this test is simple, and backs up the integrity of your system be it permissions, interfaces or input forms.
 
-If you installed the Drupal Behat Extension, the extra step definitions it provides allows us to create nodes on
-the fly with <code>Given</code> statements.
-
 #### Step Definitions
 
 A step definition is a written statement that Behat maps to a PHP method. Everything above starting with <code>Given, When, Then</code> are
