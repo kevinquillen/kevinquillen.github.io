@@ -1,9 +1,13 @@
+// primary colors from theme
 $seagreen: #18bc9c;
 $lightblue: #3498db;
 $coral: lightcoral;
 $brightred: #e74c3c;
 $mustard: #f39c12;
 $slate: #1e2a36;
+
+// custom colors
+$darkgreen: #52BB67;
 
 body {
   &.seagreen {
@@ -15,6 +19,10 @@ body {
       a {
         color: $seagreen;
       }
+    }
+
+    .btn-outline:hover, .btn-outline:focus, .btn-outline:active, .btn-outline.active {
+      color: $seagreen;
     }
 
     .pager a {
@@ -33,6 +41,10 @@ body {
       }
     }
 
+    .btn-outline:hover, .btn-outline:focus, .btn-outline:active, .btn-outline.active {
+      color: $lightblue;
+    }
+
     .pager a {
       background-color: $lightblue;
     }
@@ -43,10 +55,14 @@ body {
       background: $coral;
     }
 
-    h1, h2, h3, h4, h5, h6, p {
+    h1, h2, h3, h4, h5, h6, p, .btn-outline:hover, .btn-outline:focus, .btn-outline:active, .btn-outline.active {
       a {
         color: $coral;
       }
+    }
+
+    .btn-outline:hover, .btn-outline:focus, .btn-outline:active, .btn-outline.active {
+      color: $coral;
     }
 
     .pager a {
@@ -65,6 +81,10 @@ body {
       }
     }
 
+    .btn-outline:hover, .btn-outline:focus, .btn-outline:active, .btn-outline.active {
+      color: $brightred;
+    }
+
     .pager a {
       background-color: $brightred;
     }
@@ -79,6 +99,10 @@ body {
       a {
         color: $mustard;
       }
+    }
+
+    .btn-outline:hover, .btn-outline:focus, .btn-outline:active, .btn-outline.active {
+      color: $mustard;
     }
 
     .pager a {
@@ -97,8 +121,32 @@ body {
       }
     }
 
+    .btn-outline:hover, .btn-outline:focus, .btn-outline:active, .btn-outline.active {
+      color: $slate;
+    }
+
     .pager a {
       background-color: $slate;
+    }
+  }
+
+  &.darkgreen {
+    header {
+      background: $darkgreen;
+    }
+
+    h1, h2, h3, h4, h5, h6, p {
+      a {
+        color: $darkgreen;
+      }
+    }
+
+    .btn-outline:hover, .btn-outline:focus, .btn-outline:active, .btn-outline.active {
+      color: $darkgreen;
+    }
+
+    .pager a {
+      background-color: $darkgreen;
     }
   }
 }

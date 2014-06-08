@@ -4,8 +4,8 @@
 <div class="container">
   <div class="post-content">
     {{ content }}
+    <p class="text-right"><em><strong>Posted:</strong></em> {{ page.date | date: "%B %-d, %Y" }}</p>
     <hr>
-    <!--<p><strong>Posted on:</strong> {{ page.date | date: "%B %-d, %Y" }}</p>-->
     <!--{% if page.category.size > 0 %}-->
     <!--<p><strong>Category:</strong> {{ page.category | capitalize }}</p>-->
     <!--{% endif %}-->
