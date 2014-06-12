@@ -4,7 +4,7 @@
 <div class="container">
   <div class="post-content">
     {{ content }}
-    <p class="text-right"><small><em><strong>Posted:</strong></em> {{ page.date | date: "%B %-d, %Y" }}</small></p>
+    <p class="text-right"><small><em><strong>Posted:</strong> {{ page.date | date: "%B %-d, %Y" }}</em></small></p>
     <hr>
     {% include widgets/prev-next.html %}
     <hr>

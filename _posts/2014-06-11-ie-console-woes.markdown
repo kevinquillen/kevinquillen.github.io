@@ -22,7 +22,7 @@ The most common problem that bites people in the ass is one that seems fairly in
 console.log(foo);
 </code></pre>
 
-Halt! Yes, little ol <code>console.log();</code> who just wants to help out when debugging Javascript can cause IE to completely stop processing scripts
+Yes, little ol <code>console.log();</code> who just wants to help out when debugging Javascript can cause IE to completely stop processing scripts
 on the page. To add to the mystery, if you keep watching your page in IE with devtools open - *you won't notice an issue at all*.
 
 #### EX PLAIINNNNN
@@ -35,7 +35,7 @@ one of two things:
 
 Nine times out of ten, you have an errant console.log in the code somewhere. This does not affect any browser other than IE. Try it for yourself.
 
-##### Litmus Test
+##### How can I tell?
 
 A simple test to see if <code>console</code> is the issue in your sites Javascript is to add this just before your body tag, or, after all your sites
 Javascript files have loaded:
@@ -52,7 +52,7 @@ if(!window.console) {
 }
 </code></pre>
 
-Reload that in IE. If your scripts start magically working - your issue is definitely console methods being used. Don't leave this in though, it certainly
+Reload that in IE. If your script(s) start magically working - your issue is definitely console methods being used. Don't leave this in though, it certainly
 is not a fix by any means. It simply defines an object if it is not yet defined.
 
 The simple fix is commenting it out when you're through using it. Often times, we get so gung-ho about debugging our code that sometimes you cannot
