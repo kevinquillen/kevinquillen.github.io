@@ -1,5 +1,5 @@
 permalink: /:categories/:year/:month/:day/:title
-exclude: [".rvmrc", ".rbenv-version", "README.md", "Rakefile", "changelog.md", "node_modules", "scss", "bower_components", "grunt"]
+exclude: [".rvmrc", ".rbenv-version", "README.md", "Rakefile", "changelog.md", ".travis.yml",  "node_modules", "scss", "bower_components", "grunt"]
 pygments: true
 
 # Themes are encouraged to use these universal variables 
