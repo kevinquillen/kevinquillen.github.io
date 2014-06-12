@@ -2,7 +2,10 @@ language: ruby
 before_install:
 - travis_retry gem install jekyll
 script: jekyll build
-after_success: deploy _site
+notifications:
+  email:
+    - kevin@inclind.com
+    - shaun@inclind.com
 branches:
   only:
     - master
