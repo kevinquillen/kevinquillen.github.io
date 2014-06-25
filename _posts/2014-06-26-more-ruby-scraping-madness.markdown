@@ -7,7 +7,7 @@ category: programming
 tags: ruby, drupal
 body-color: darkgreen
 excerpt: In Nokogiri, the <code>css</code> method is simple, straightforward, and familiar if you have a background in jQuery. But, if you have multiple elements on the page to select, suddenly that method is lacking in power. We need to be able to select multiples of anything, anywhere in the DOM. This is where <code>XPath</code> comes in, and is much more efficient than the <code>css</code> selector.
-published: false
+published: true
 ---
 
 What? Thought we were done? There are still things left to learn here. There are always things to learn.
@@ -154,3 +154,6 @@ end
 </code></pre>
 
 An improvement from before - <code>clean_text</code> has a fallback table of characters to replace if not found.
+
+Again, Ruby & Nokogiri prove to be a powerful team when it comes to scraping content. This is by far my preferred way of migrating static sites. I have used it for CSV's and Markdown files, as well as ASP and HTML files for moving into 
+dynamic CMS systems. It is exceptionally more efficient at handling strings and manipulating them with PHP - and with Ruby you can certainly do more with less.
