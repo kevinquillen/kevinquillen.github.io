@@ -6,6 +6,7 @@ date:   2014-06-23 14:00:00
 category: programming
 tags: ruby, drupal
 body-color: brightred
+excerpt:
 published: true
 ---
 
