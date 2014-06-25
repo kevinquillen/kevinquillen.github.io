@@ -6,11 +6,7 @@ date:   2014-06-23 14:00:00
 category: programming
 tags: ruby, drupal
 body-color: brightred
-excerpt: Every now and then you're going to have one of those projects that will need to be migrated from one platform to another. If you're lucky, it's a system like Drupal that has an excellent [Migration
-         framework](https://www.drupal.org/project/migrate). I've migrated lots of sites from the small to the very large, such as this one with [1 million+ records, over a decades worth](http://www.sportsatthebeach.com).
-
-         Occasionally though, you will have to migrate a static site into a dynamic site. Don't panic. Don't hire a dozen interns to do the grunt work. With Ruby, we can quickly create intelligent scripts to scrape the static files and generate a
-         CSV datasource for us to use.
+excerpt: Every now and then you're going to have one of those projects that will need to be migrated from one platform to another. Occasionally you will have to migrate a static site into a dynamic site. Don't panic. Don't hire a dozen interns to do the grunt work. With Ruby, we can quickly create intelligent scripts to scrape the static files and generate a CSV datasource for us to use.
 published: true
 ---
 
