@@ -102,7 +102,7 @@ tagline = item.at_xpath('.//section/p').text.strip
 image = item.at_xpath('.//img')['src']
 </code></pre>
 
-Once we are inside the loop, <code>item</code> is the current list item we are working with. We can then use local xpath expressions with Nokogiri's <code>[at_xpath](http://nokogiri.org/Nokogiri/XML/Node.html#method-i-at_xpath)</code> method - the <code>.//</code> selector tells XPath to look at the current level down, whereas just <code>//</code> would
+Once we are inside the loop, <code>item</code> is the current list item we are working with. We can then use local xpath expressions with Nokogiri's [at_xpath](http://nokogiri.org/Nokogiri/XML/Node.html#method-i-at_xpath) method - the <code>.//</code> selector tells XPath to look at the current level down, whereas just <code>//</code> would
 search the entire document (and produce incorrect results).
 
 For some elements, we don't want their raw text value. For instance, the video link, we just want to preserve the Vimeo URL. You can dereference the attribute with the XPath selector inline <code>item.at_xpath('.//a[@class="popVideo"]')['href']</code>, so we only
