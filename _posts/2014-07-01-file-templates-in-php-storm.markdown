@@ -1,7 +1,7 @@
 ---
 layout: post
 title:  Using Live Templates in PHPStorm
-date:   2014-06-30 10:10:00 AM
+date:   2014-07-01 10:10:00 AM
 category: tools
 tags: ide, phpstorm
 body-color: mustard
@@ -117,8 +117,10 @@ $items['$NAME$/%'] = array(
 Set the context to .module files or simply 'Everywhere' to make this active from any file context.
 
 Now when you type hook_menu and TAB, you get a hook menu with a router item setup for you to fill in quickly. This is a great time saver particularly
-when hooks and functions can have arguments and parameters that are hard to remember offhand. Typing hook_menu_item and tab repeatedly will
-create router items in rapid fire succession - feel free to create variants of this for dummy items (default local tasks) and tab router items (local tasks).
+when hooks and functions can have arguments and parameters that are hard to remember offhand. The <code>$NAME$</code> variable prefills in with the file
+name the snippet is being generated within.
+
+Typing hook_menu_item and tab repeatedly will create router items in rapid fire succession - feel free to create variants of this for dummy items (default local tasks) and tab router items (local tasks).
 
 To get all the functions in Drupal supported, [some users have made a LiveTemplate project for D7 and D8](https://www.drupal.org/project/phpstorm-templates). It's an awesome tool to have to supplement
 other tools in PHPStorm.
