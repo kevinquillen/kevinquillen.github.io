@@ -251,17 +251,23 @@ div.home-content {
 }
 
 div.latest {
-  padding: 20px 0;
+  padding: 20px 0 0 0;
 
   h1, h2, h3, h4, h5, h6 {
     margin: 21px 0;
   }
 }
 
-div.posts-list small {
-  font-size: 75%;
-  display: block;
-  margin: 5px 0;
+div.posts-list {
+  small {
+    font-size: 75%;
+    display: block;
+    margin: 5px 0;
+  }
+
+  .post-container {
+    margin-bottom: 10px;
+  }
 }
 
 div.post-content {
