@@ -1,28 +1,25 @@
 ---
 layout: nil
-title : RSS Feed
 ---
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+    <title type="text" xml:lang="en">{{ site.root_desc }}</title>
+    <link type="application/atom+xml" href="http://kevinquillen.com/feed/" rel="self"/>
+    <link type="text" href="http://kevinquillen.com" rel="alternate"/>
+    <updated>{{ site.time | date_to_xmlschema }}</updated>
+    <id>http://kevinquillen.com</id>
+    <author>
+        <name>Kevin Quillen</name>
+    </author>
+    <rights>Copyright (c) 2000-2014, Kevin Quillen; all rights reserved.</rights>
 
-<?xml version="1.0" encoding="UTF-8" ?>
-<rss version="2.0">
-<channel>
-        <title>{{ site.title }}</title>
-        <description>{{ site.title }} - {{ site.tagline }}</description>
-        <link>{{ site.production_url }}{{ site.rss_path }}</link>
-        <link>{{ site.production_url }}</link>
-        <lastBuildDate>{{ site.time | date_to_xmlschema }}</lastBuildDate>
-        <pubDate>{{ site.time | date_to_xmlschema }}</pubDate>
-        <ttl>1800</ttl>
-
-{% for post in site.posts %}
-        <item>
-                <title>{{ post.title }}</title>
-                <description>{{ post.excerpt | xml_escape }}</description>
-                <link>{{ site.production_url }}{{ post.url }}</link>
-                <guid>{{ site.production_url }}{{ post.id }}</guid>
-                <pubDate>{{ post.date | date_to_xmlschema }}</pubDate>
-        </item>
-{% endfor %}
-
-</channel>
-</rss>
+    {% for post in site.posts limit:20 %}
+        <entry>
+            <title>{{ post.title }}</title>
+            <link href="http://kevinquillen.com{{ post.url }}"/>
+            <updated>{{ post.date | date_to_xmlschema }}</updated>
+            <id>http://kevinquillen.com{{ post.id }}</id>
+            <content type="html">{{ post.excerpt | xml_escape }}</content>
+        </entry>
+    {% endfor %}
+</feed>
