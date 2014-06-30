@@ -28,6 +28,7 @@ paginate: 10
 # Finally if you are pushing to a GitHub project page, include the project name at the end.
 #
 production_url : http://kevinquillen.com
+rss_path: rss.xml
 
 gems:
 - jekyll-mentions
