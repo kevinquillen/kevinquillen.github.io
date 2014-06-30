@@ -28,3 +28,8 @@ paginate: 10
 # Finally if you are pushing to a GitHub project page, include the project name at the end.
 #
 production_url : http://kevinquillen.github.io
+
+gems:
+- jekyll-mentions
+- jekyll-redirect-from
+- jekyll-sitemap
