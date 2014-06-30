@@ -6,6 +6,7 @@ category: tools
 tags:
  - ide
  - phpstorm
+ - drupal planet
 body-color: mustard
 excerpt: PHPStorm and the JetBrains suite of products are without a doubt, the best IDEs on the market for their respective applications. If you do a lot of custom development, you owe it to yourself to learn and use every tool this IDE can afford you.
 subtitle: Put more tools in your toolbelt
