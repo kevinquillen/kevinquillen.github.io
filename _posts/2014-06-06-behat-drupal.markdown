@@ -1,6 +1,6 @@
 ---
 layout: post
-title:  "Up and Running with Behat, Drupal, & Vagrant"
+title:  "Up and Running with Behat, Drupal, &amp; Vagrant"
 subtitle: There be no dragons here, I promise.
 date:   2014-06-06 14:00:00
 category: bdd
