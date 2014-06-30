@@ -3,7 +3,9 @@ layout: post
 title:  Using Live Templates in PHPStorm
 date:   2014-07-01 10:10:00 AM
 category: tools
-tags: ide, phpstorm
+tags:
+ - ide
+ - phpstorm
 body-color: mustard
 excerpt: PHPStorm and the JetBrains suite of products are without a doubt, the best IDEs on the market for their respective applications. If you do a lot of custom development, you owe it to yourself to learn and use every tool this IDE can afford you.
 subtitle: Put more tools in your toolbelt

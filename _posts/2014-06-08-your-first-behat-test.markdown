@@ -5,6 +5,7 @@ subtitle: Take your first step into a larger world.
 date:   2014-06-08 14:00:00
 category: bdd
 body-color: darkgreen
+tags: [drupal planet, drupal 7]
 excerpt: We have all at some point or another faced projects where wasted minutes and/or hours on regressions or redo work not only eat into the current project budget, but hurt long term numbers too on the books. Fortunately, we can crush this leveraging Behat and covering our bases with tests, and everyone goes home happy.
 ---
 

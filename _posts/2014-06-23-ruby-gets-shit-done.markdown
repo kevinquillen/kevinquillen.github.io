@@ -4,7 +4,7 @@ title: Web scraping magic with Ruby and Nokogiri
 subtitle: Get shit done so you can have a beer.
 date:   2014-06-23 14:00:00
 category: programming
-tags: ruby, drupal
+tags: [drupal planet, drupal 7]
 body-color: brightred
 excerpt: Every now and then you're going to have one of those projects that will need to be migrated from one platform to another. Occasionally you will have to migrate a static site into a dynamic site. Don't panic. Don't hire a dozen interns to do the grunt work. With Ruby, we can quickly create intelligent scripts to scrape the static files and generate a CSV datasource for us to use.
 published: true

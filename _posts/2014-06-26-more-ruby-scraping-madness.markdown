@@ -4,7 +4,7 @@ title:  "More scraping magic with Ruby: UTF-8 and XPath"
 subtitle: Slice and dice content in high gear
 date:   2014-06-26 14:00:00
 category: programming
-tags: ruby, drupal
+tags: [ruby, drupal]
 body-color: darkgreen
 excerpt: In Nokogiri, the <code>css</code> method is simple, straightforward, and familiar if you have a background in jQuery. But, if you have multiple elements on the page to select, suddenly that method is lacking in power. We need to be able to select multiples of anything, anywhere in the DOM. This is where <code>XPath</code> comes in, and is much more efficient than the <code>css</code> selector.
 published: true

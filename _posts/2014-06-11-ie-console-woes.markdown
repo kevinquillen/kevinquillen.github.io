@@ -4,7 +4,7 @@ title: Internet Explorer console.log Woes
 subtitle: Don't let this crappy browser get you down.
 date:   2014-06-11 14:00:00
 category: ie
-tags: javascript
+tags: [javascript]
 body-color: mustard
 published: true
 ---

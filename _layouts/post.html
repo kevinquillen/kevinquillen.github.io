@@ -5,6 +5,9 @@
   <div class="post-content">
     {{ content }}
     <p class="text-right"><small><em><strong>Posted:</strong> {{ page.date | date: "%B %-d, %Y" }}</em></small></p>
+    <p class="text-right"><small><em><strong>Tagged with:</strong> {% for tag in page.tags %}
+      {{ tag }}{% if forloop.index != page.tags.size %}, {% endif %}
+      {% endfor %}</em></small></p>
     <hr>
     {% include widgets/prev-next.html %}
     <hr>

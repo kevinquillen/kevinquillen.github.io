@@ -4,6 +4,7 @@ title:  Spiff up your Drupal AJAX interactions.
 subtitle: For the users sake, kill throbber.gif.
 date:   2014-06-04 14:00:00
 category: javascript
+tags: [drupal planet, drupal 7]
 body-color: coral
 excerpt: There are things I love about Drupal. There are also things I flat out hate about Drupal, too. One of them is the throbber.gif activity indicator. Guys, we can do better. Let's add some shine.
 ---

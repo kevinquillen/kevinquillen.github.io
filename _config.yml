@@ -29,8 +29,3 @@ paginate: 10
 #
 production_url : http://kevinquillen.com
 rss_path: rss.xml
-
-gems:
-- jekyll-mentions
-- jekyll-redirect-from
-- jekyll-sitemap
