@@ -39,7 +39,7 @@ public function complete($node, stdClass $row) {
 </code></pre>
 
 I also like to go a step further - I usually have a parent Migration class that I inherit from that contains lots of convenient helpers; creating redirects is one of those helpers. In that case,
-your parent class would have a method called <code>generateNodeRedirect</code> with the same arguments as the <code>complete()</code> method. Then, any complete method in any number of node Migration classes
+your parent class would have a method called <code>generateNodeRedirect()</code> with the same arguments as the <code>complete()</code> method. Then, any complete method in any number of node Migration classes
 then becomes:
 
 <pre class="language-php"><code class="language-php">
