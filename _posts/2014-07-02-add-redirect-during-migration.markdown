@@ -10,7 +10,7 @@ tags:
 body-color: seagreen
 excerpt: a
 subtitle: Don't pollute a new site with nasty 404's
-published: TRUE
+published: FALSE
 ---
 
 The way I like to do it is to place the following in my Migration class <code>complete()</code> method:
