@@ -13,6 +13,9 @@ subtitle: Don't pollute a new site with nasty 404's
 published: FALSE
 ---
 
+Migrating content from one platform to another saves lots of time from doing grunt work and gets data moved fast. However, simply moving the content doesn't mean the job is done. There are other considerations too, such as 301
+redirects for example. Since we are moving content, our aliases are likely changing too. We can create 301s while migrating content in all at once.
+
 The way I like to do it is to place the following in my Migration class <code>complete()</code> method:
 
 <pre class="language-php"><code class="language-php">
@@ -46,4 +49,5 @@ public function complete($node, stdClass $row) {
 }
 </code></pre>
 
-Keeping utility functions in a parent class you extend from keeps it located all in one place so you aren't repeating yourself (DRY, fool!).
+Keeping utility functions in a parent class you extend from keeps it located all in one place so you aren't repeating yourself (DRY!). You can repeat this pattern for users, taxonomies and custom entities
+too, just change the values being set.
