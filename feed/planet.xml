@@ -7,7 +7,7 @@ layout: nil
     <link type="application/atom+xml" href="http://kevinquillen.com/feed/planet.xml" rel="self"/>
     <link type="text/html" href="http://kevinquillen.com/" rel="alternate"/>
     <updated>{{ site.time | date_to_xmlschema }}</updated>
-    <id>http://kevinquillen.com</id>
+    <id>http://kevinquillen.com/</id>
     <author>
         <name>Kevin Quillen</name>
     </author>
