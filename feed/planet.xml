@@ -3,9 +3,9 @@ layout: nil
 ---
 <?xml version="1.0" encoding="utf-8"?>
 <feed xmlns="http://www.w3.org/2005/Atom">
-    <title type="text" xml:lang="en">{{ site.root_desc }}</title>
-    <link type="application/atom+xml" href="http://kevinquillen.com/feed/" rel="self"/>
-    <link type="text" href="http://kevinquillen.com" rel="alternate"/>
+    <title type="text" xml:lang="en">{{ site.title }} - {{ site.tagline }}</title>
+    <link type="application/atom+xml" href="http://kevinquillen.com/feed/planet.xml" rel="self"/>
+    <link type="text/html" href="http://kevinquillen.com/" rel="alternate"/>
     <updated>{{ site.time | date_to_xmlschema }}</updated>
     <id>http://kevinquillen.com</id>
     <author>
