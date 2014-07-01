@@ -19,7 +19,7 @@ every IDE out there, going as far back as HotDog HTML (remember that?) all the w
 For years I was basically stuck using Dreamweaver because there wasn't really an alternative at the time, besides Notepad++ (which for me, on Windows,
 is still my goto editor). Eclipse and Netbeans were free, but they always felt bloated, buggy, and lacking.
 
-[JetBrains](http://www.jetbrains.com/products.html) knows just what I need - I do not have to look further for my One True IDE&tmark;.
+[JetBrains](http://www.jetbrains.com/products.html) knows just what I need - I do not have to look further for my One True IDE&trade;.
 
 One of my favorite features of any IDE is code sense where you start typing a function name or class, then tab to automatically complete it. [PHPStorm](http://www.jetbrains.com/phpstorm/)
 allows you to add on and define your own code templates to do this too, called LiveTemplates. For any syntax or language, you can write a snippet
