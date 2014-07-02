@@ -24,7 +24,7 @@ public function complete($node, stdClass $row) {
   redirect_object_prepare($redirect);
   $redirect->source = date('Y', $row->post_date) . '/' . date('m', $row->post_date) . '/' . $row->post_name; // Old URL
   $redirect->source_options = array();
-  $redirect->redirect = 'node/' . $entity->nid; // New system path
+  $redirect->redirect = 'node/' . $node->nid; // New system path
   $redirect->redirect_options = array();
   $redirect->type = 'redirect';
   $redirect->language = LANGUAGE_NONE;
