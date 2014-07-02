@@ -29,7 +29,7 @@ public function complete($node, stdClass $row) {
   $redirect->type = 'redirect';
   $redirect->language = LANGUAGE_NONE;
 
-  $alias = db_query('SELECT alias FROM {url_alias} WHERE source = :src_path', array(':src_path' => 'node/'. $entity->nid))->fetchField();
+  $alias = db_query('SELECT alias FROM {url_alias} WHERE source = :src_path', array(':src_path' => 'node/'. $node->nid))->fetchField();
 
   // Create the redirect, if it does not exist already
   if ($alias && $alias != $redirect->source) {
