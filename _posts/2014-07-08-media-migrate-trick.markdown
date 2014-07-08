@@ -20,7 +20,7 @@ in the system that makes use of file URLs that have been long deleted.
 Fortunately, we can do a quick check before processing the record to make sure that the file does in fact exist before we attempt to download and save it in the media system. By using a custom method and implementing 
 <code>prepareRow()</code>, we can skip 'bad' rows entirely:
 
-<pre class="language-php line-numbers offset-1"><code class="language-php">
+<pre class="language-php line-numbers"><code class="language-php">
 /**
  * Implements method prepareRow().
  * @param $row
