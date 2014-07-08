@@ -1,6 +1,6 @@
 ---
 layout: page
-body-color: blue
+body-color: lightblue
 title: "The Archives"
 subtitle: "We have top men working on it.<br><br><em>Top... men.</em>"
 ---
