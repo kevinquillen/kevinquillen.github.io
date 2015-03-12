@@ -1,13 +1,16 @@
-permalink: /:categories/:year/:month/:day/:title
+# Dependencies
 exclude: [".rvmrc", ".rbenv-version", "README.md", "Rakefile", "changelog.md", ".travis.yml",  "node_modules", "scss", "bower_components", "grunt"]
-pygments: true
+highlighter: true
 markdown: kramdown
 
-# Themes are encouraged to use these universal variables 
-# so be sure to set them if your theme uses them.
-#
+# Permalinks
+permalink: /:categories/:year/:month/:day/:title
+
+# Setup
 title : Kevin Quillen
 tagline: Still coding. Still rocking. Still ranting.
+description: Still coding. Still rocking. Still ranting.
+url: http://kevinquillen.com
 author :
   name : Kevin Quillen
   email : kevin@inclind.com
@@ -17,15 +20,45 @@ author :
   linkedin : http://www.linkedin.com/kevinquillen
   tagline: still coding. still laughing. still rocking. still ranting.
 
-paginate: 10
+paginate:	5
 
-# The production_url is only used when full-domain names are needed
-# such as sitemap.txt 
-# Most places will/should use BASE_PATH to make the urls
-#
-# If you have set a CNAME (pages.github.com) set your custom domain here.
-# Else if you are pushing to username.github.io, replace with your username.
-# Finally if you are pushing to a GitHub project page, include the project name at the end.
-#
+# Custom vars
+icon:		/assets/images/icon.png
+cover:  /assets/images/code-1.jpg
+
+social:
+  - icon:	twitter
+    url:	https://twitter.com/kevinquillen
+    desc:	Follow me on twitter
+
+  - icon:	github
+    url:	https://github.com/kevinquillen
+    desc:	Fork me on github
+
+  - icon:	cog
+    url:	https://drupal.org/user/317279
+    desc:	My Drupal.org Profile
+
+  - icon:	linkedin
+    url:	http://www.linkedin.com/kevinquillen
+    desc:	Add me on LinkedIn
+
+  - icon:	feed
+    url:	http://kevinquillen.com/atom.xml
+    desc:	Subscribe to my feed
+
+menu:
+  - title:	Home
+    url:	/
+
+  - title:	About
+    url:	/about
+
+copyright:
+  author:	Kevin Quillen
+  url:		http://kevinquillen.com
+  type_title:	All rights reserved
+  type_url:	http://creativecommons.org/licenses/by-nc/2.5
+
 production_url : http://kevinquillen.com
 rss_path: rss.xml

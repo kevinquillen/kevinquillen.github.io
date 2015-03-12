@@ -4,7 +4,7 @@ title:  "Using the Migrate Framework with a remote database on Pantheon"
 subtitle: Define your database connections on the fly, not in settings.php.
 date:   2014-08-02 14:00:00
 category: migration
-tags: 
+tags:
  - drupal planet
  - drupal
  - migrate
@@ -12,10 +12,11 @@ tags:
 body-color: mustard
 excerpt: If you host your Drupal site on the Pantheon platform, you may already know that you do not need to include a settings.php file because they provide the connection information for you automatically. However, you _can_ provide one if you are setting up database connections. What was unclear, at least to me, is that you can only define connections for local development. Fortunately, there is a way around this.
 published: true
+image: /assets/images/code-3.jpg
 ---
 
 If you host your Drupal site on the Pantheon platform, you may already know that you do not need to include a settings.php file because they provide the connection information for you automatically. However, you _can_ provide one if you are
-setting up database connections. What was unclear, at least to me, is that you can only define connections for local development. Connections are otherwise ignored on the Pantheon environment, I assume for security reasons (since the user/pass/host would be 
+setting up database connections. What was unclear, at least to me, is that you can only define connections for local development. Connections are otherwise ignored on the Pantheon environment, I assume for security reasons (since the user/pass/host would be
 out in the open) and probably other technical reasons I am unaware of.
 
 Combined with that, you can only have one database per environment on Pantheon. So, you can't create two databases and set them up side by side. You would need to have two Pantheon sites going, in that case, if the other site is hosted on Pantheon.
@@ -50,7 +51,7 @@ abstract class YourParentMigration extends Migration {
     $this->connection = 'default';
     $this->connection_key = 'legacy';
   }
-  
+
   // other methods ...
 }
 </code></pre>
@@ -62,7 +63,7 @@ abstract class YourParentMigration extends Migration {
 class YourChildMigration extends YourParentMigration {
   public function __construct($arguments) {
     parent::__construct($arguments);
-    
+
     $query = Database::getConnection($this->connection, $this->connection_key);
     // other query arguments to execute
   }

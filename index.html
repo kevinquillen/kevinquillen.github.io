@@ -1,36 +1,40 @@
 ---
 layout: default
-body-color: lightblue
+title: Home
 ---
 
-<div class="col-lg-12 home-content">
-  {% for post in site.posts limit:1 %}
-    <div class="latest">
-      <h2 class="text-center"><a href="{{ post.url }}" title="{{ post.title }}">{{ post.title }}</a>
-      <br><small>{{ post.subtitle }}</small></h2>
-      <p class="lead">{{ post.excerpt }}</p>
-      <p><a href="{{ post.url }}" title="{{ post.title }}">Read more &raquo;</a></p>
-    </div>
-  {% endfor %}
-
-  {% if site.posts.size > 1 %}
-    <hr>
-
-    <div class="posts-list">
-      {% for post in site.posts limit:5 offset:1 %}
-        <div class="col-lg-12 post-container">
-          <article>
-            <div class="col-lg-2">
-              <h5>{{ post.date | date: "%B %-d, %Y" }} <small>{{ post.category }}</small></h5>
-            </div>
-            <div class="col-lg-7 post">
-              <h4><a href="{{ post.url }}" title="{{ post.title }}">{{ post.title }}</a> <small>{{ post.subtitle }}</small></h4>
-            </div>
-          </article>
-        </div>
-      {% endfor %}
-    </div>
-  {% endif %}
-
-  <p class="text-right"><a href="/archive">View the Archives &raquo;</a></p>
+<header class="clean" style="height: 350px; background-image: url({{ site.cover }});">
+	{% include top.html %}
+	<div id="home-title">
+		<h3><a href="/about">
+			Hi! I'm Kevin, a humble developer. These are my thoughts.
+		</a></h3>
+	</div>
+</header>
+<div id="post-list">
+	{% for post in paginator.posts %}
+		<div>
+			<span class="post-date">{{ post.date | date: '%B %d, %Y' }}</span>
+			<h1><a href="{{ post.url }}">{{ post.title }}</a></h1>
+			<p class="post-description">{{ post.excerpt | strip_html }}</p>
+			<p class="post-description"><a href="{{ post.url }}" title="{{ post.title }}">Read more &raquo;</a></p>
+			<hr>
+		</div>
+	{% endfor %}
 </div>
+<nav class="pagination" role="navigation">
+	{% if paginator.next_page %}
+		<a class="newer-posts" href="/page{{paginator.next_page}}">&larr; Older posts</a>
+	{% endif %}
+	<span class="page-number">Page {{ paginator.page }} of {{ paginator.total_pages }}</span>
+	{% if paginator.previous_page %}
+		{% if paginator.page == 2 %}
+			<a class="older-posts" href="/">Newer posts &rarr;</a>
+		{% else %}
+			<a class="older-posts" href="/page{{paginator.previous_page}}">Newer posts &rarr;</a>
+		{% endif %}
+	{% endif %}
+</nav>
+<footer class="clean" style="background-image: url({{ site.cover }}); background-position: bottom; height: 60px;">
+	<p class="copyright">&copy;{{ site.time | date: "%Y" }}, <a href="{{ site.copyright.url }}" target="_blank">{{ site.copyright.author }}</a>. <a href="{{ site.copyright.type_url }}" target="_blank">{{ site.copyright.type_title }}</a>.</p>
+</footer>
