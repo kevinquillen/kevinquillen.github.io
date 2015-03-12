@@ -1,6 +1,6 @@
 # Dependencies
 exclude: [".rvmrc", ".rbenv-version", "README.md", "Rakefile", "changelog.md", ".travis.yml",  "node_modules", "scss", "bower_components", "grunt"]
-highlighter: true
+highlighter: pygments
 markdown: kramdown
 
 # Permalinks
