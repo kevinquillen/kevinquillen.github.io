@@ -1,8 +1,19 @@
-{% include partials/header.html %}
-{% include partials/homepage/hero.html %}
+<!DOCTYPE html>
+<html>
+{% include head.html %}
+<body>
+	{{ content }}
 
-<div class="container">
-  {{ content }}
-</div>
-
-{% include partials/footer.html %}
+	<script src="/assets/js/classie.js"></script>
+	<script src="/assets/js/prism.js"></script>
+	<script type="text/javascript">
+	  var _gaq=[["_setAccount","UA-5261354-1"],["_trackPageview"]];
+	  (function(d,t){
+	    var g=d.createElement(t), s=d.getElementsByTagName(t)[0];
+	    g.async=1;
+	    g.src=("https:"==location.protocol?"//ssl":"//www")+".google-analytics.com/ga.js";
+	    s.parentNode.insertBefore(g,s)
+	  }(document,"script"));
+	</script>
+</body>
+</html>

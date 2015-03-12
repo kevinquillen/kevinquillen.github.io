@@ -10,6 +10,7 @@ tags:
 body-color: seagreen
 subtitle: Don't pollute a new site with nasty 404's
 published: TRUE
+image: /assets/images/code-1.jpg
 ---
 
 Migrating content from one platform to another saves lots of time from doing grunt work and gets data moved fast. However, simply moving the content doesn't mean the job is done. There are other considerations too, such as 301

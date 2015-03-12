@@ -10,17 +10,18 @@ tags:
  - sass 3.3
  - sass maps
  - theming
+image: /assets/images/code-2.jpg
 ---
 
-Lately I have been exploring whats coming down the pipe for new versions of SASS. Version 3.3.x brings in a lot of new or improved features 
-that, as a programmer, are very cool. I've enjoyed using SASS as a means of styling for quite some time now. It is simply a very efficient way 
+Lately I have been exploring whats coming down the pipe for new versions of SASS. Version 3.3.x brings in a lot of new or improved features
+that, as a programmer, are very cool. I've enjoyed using SASS as a means of styling for quite some time now. It is simply a very efficient way
 to generate style for your site in a small amount of code.
 
-While building my new site, I had a little issue that I didn't know how to work around until just now. I typically use Grunt to build my 
-projects, including compile SASS. When Grunt fails, I use Compass (which is rare). However, neither the SASS libs or Compass gem support 
+While building my new site, I had a little issue that I didn't know how to work around until just now. I typically use Grunt to build my
+projects, including compile SASS. When Grunt fails, I use Compass (which is rare). However, neither the SASS libs or Compass gem support
 Sass version 3.3.x yet. With a little doc diving, I wielded the <code>sass</code> command line tool directly to use the newest build.
 
-One great new feature is the ability to map key value pairs in a sass file. This means you can declare values and variables the same way you 
+One great new feature is the ability to map key value pairs in a sass file. This means you can declare values and variables the same way you
 would define a JSON object. You can also nest maps within maps, which grants even more flexibility.
 
 I use a variety of colors to keep it interesting. One thing that was bothering me was my sass file that controlled the dominant colors on the site:
@@ -217,12 +218,12 @@ $colors: (
 }
 </code></pre>
 
-Awww SNAP! Look at how much code that reduced while giving us the same result! From 150 lines to 34. Now in your head, add up all the reductions 
+Awww SNAP! Look at how much code that reduced while giving us the same result! From 150 lines to 34. Now in your head, add up all the reductions
 through the codebase this could save you.
 
 Not only that, it builds a better base to style off of. Instead of look at the same blocks of code per color, we now look at a single declaration and can easily add more overrides in per color added.
 
-To use the latest version of Sass, you can run <code>gem install sass</code> to pull the latest version. Sass should then be available from 
+To use the latest version of Sass, you can run <code>gem install sass</code> to pull the latest version. Sass should then be available from
 the command line. To compile, simply type:
 
 <pre class="language-bash"><code class="language-bash">

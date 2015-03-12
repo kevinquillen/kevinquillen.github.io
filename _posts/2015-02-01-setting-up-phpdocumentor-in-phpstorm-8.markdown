@@ -6,24 +6,24 @@ date:   2015-02-01 14:00:00
 category: ide
 tags:
  - phpstorm
-body-color: brightred
 excerpt: PHPStorm is a fantastic IDE for PHP. I've been a fan of JetBrains' products for quite some time.
+image: /assets/images/code-2.jpg
 ---
 
 PHPStorm is a fantastic IDE for PHP. I've been a fan of JetBrains' products for quite some time. Whether it's RubyMine,
 WebStorm, PHPStorm, or PyCharm, their IDEs are one of the most developer friendly tools I have ever come across.
 
-One of my favorite things to assist in my development needs is adding external tools in to support the work I am doing. 
-[PHPDocumentor](http://www.phpdoc.org/) is a great tool that can review and parse all of your code and generate navigable code documentation based on the 
-code comments that precede functions and methods. This is helpful because you can navigate them faster than code files, and still 
+One of my favorite things to assist in my development needs is adding external tools in to support the work I am doing.
+[PHPDocumentor](http://www.phpdoc.org/) is a great tool that can review and parse all of your code and generate navigable code documentation based on the
+code comments that precede functions and methods. This is helpful because you can navigate them faster than code files, and still
 see a swath of relative information. The better you comment your code, the better the documentation will become.
 
-I try to keep my tool(s) project agnostic and workable in any project. Therefore, my requirements for setting up something like 
-[PHPDocumentor](http://www.phpdoc.org/) is to install it cleanly and make it available anywhere. While it is possible to install it as a dependency via 
+I try to keep my tool(s) project agnostic and workable in any project. Therefore, my requirements for setting up something like
+[PHPDocumentor](http://www.phpdoc.org/) is to install it cleanly and make it available anywhere. While it is possible to install it as a dependency via
 Composer, the advised method is to install it via PEAR. This makes it available system-wide.
 
-Once you have it installed via PEAR, follow the installation guide on the [PHPDocumentor](http://www.phpdoc.org/) website. Now, you can 
-hook it up as an external tool for PHPStorm and use it in any project you desire. We also are going to supply a boilerplate configuration file to 
+Once you have it installed via PEAR, follow the installation guide on the [PHPDocumentor](http://www.phpdoc.org/) website. Now, you can
+hook it up as an external tool for PHPStorm and use it in any project you desire. We also are going to supply a boilerplate configuration file to
 use, so it is configurable on a per project basis.
 
 First, in PHPStorm, open the preferences and go to Tools > External Tools, and click "+" to add a new external tool.
@@ -38,7 +38,7 @@ Working directory: /usr/bin
 
 I am using the supplied PHP bin path that comes with OSX. If your PHP is located in a different part of the file system, use that instead.
 
-I am also supplying a runtime argument specifying the configuration file to use. PHPStorm will understand that $ProjectFileDir$ is the current project we 
+I am also supplying a runtime argument specifying the configuration file to use. PHPStorm will understand that $ProjectFileDir$ is the current project we
 are working on when we want to execute PHPDocumentor.
 
 Save and close the dialog window. You will now see 'PHPDocumentor' as a new available tool when you right click in the IDE and scroll down to 'External Tools'.
@@ -74,8 +74,8 @@ below:
 
 Save and close the dialog window.
 
-Now in your project, right click in the project root, File > New > PHPDoc Configuration. This will supply the configuration template for you, which 
-PHPDocumentor will abide by when you execute it. By default, I exclude any 'tests' directory - and for Drupal, I tell PHPDocumentor to parse files with 
+Now in your project, right click in the project root, File > New > PHPDoc Configuration. This will supply the configuration template for you, which
+PHPDocumentor will abide by when you execute it. By default, I exclude any 'tests' directory - and for Drupal, I tell PHPDocumentor to parse files with
 module, inc, and php extensions. All documentation generated will reside in the project root under 'phpdocs'.
 
 After generating a set of documentation, you will wind up with [beautiful navigable docs just like this](http://demo.phpdoc.org/Clean/).

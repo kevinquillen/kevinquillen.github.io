@@ -1,7 +1,7 @@
 ---
 layout: page
 body-color: mustard
-title: "Who is Kevin Quillen?"
+title: "All about me."
 subtitle: He enjoy building things.
 ---
 

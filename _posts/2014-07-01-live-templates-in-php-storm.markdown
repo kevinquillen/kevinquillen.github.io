@@ -11,6 +11,7 @@ body-color: mustard
 excerpt: PHPStorm and the JetBrains suite of products are without a doubt, the best IDEs on the market for their respective applications. If you do a lot of custom development, you owe it to yourself to learn and use every tool this IDE can afford you.
 subtitle: Put more tools in your toolbelt
 published: TRUE
+image: /assets/images/code-3.jpg
 ---
 
 [PHPStorm](http://www.jetbrains.com/phpstorm/) and the [JetBrains suite](http://www.jetbrains.com/products.html) of products are without a doubt, the best IDEs on the market for their respective applications. I have tried damn near
