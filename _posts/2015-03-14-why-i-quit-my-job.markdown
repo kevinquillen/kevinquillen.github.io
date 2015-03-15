@@ -4,6 +4,8 @@ title:  "Why I Quit My Job"
 subtitle: It wasn't a bad project, except no one was in control. It was a locomotive without engineers, and we were going off the rails.
 date:   2015-03-14 14:00:00
 category: career
+tags:
+ - thoughts
 excerpt: There comes a point in every programmers career where they must make the decision to change up their career or face burnout, plateau, boredom and fatigue. I call them the four horsemen of programming and faced them all.
 image: /assets/images/boston-1.jpg
 ---
