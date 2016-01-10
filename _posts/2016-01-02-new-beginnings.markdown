@@ -1,16 +1,14 @@
 ---
 layout: post
 title:  "New Beginnings"
-date:   2016-01-02 4:30:00
+date:   2016-01-09 4:30:00
 category: general
 tags:
  - drupal
- - clojure
  - facebook
  - 2016 goals
-excerpt: The excerpt will go here.
+excerpt: Crushin it.
 image: /assets/images/code-4.jpg
-published: false
 ---
 
 ## Out with the Old
@@ -29,19 +27,58 @@ This experience has helped me better define my worth in regards to what I bring 
 
 ## Drupal Contributions
 
+Working on a number of internal initiatives and a few projects allowed me to continue to contribute code to the Drupal community on a regular basis.
+
 The [new Velir site](http://www.velir.com) uses two of them, [CodeSnippet](https://drupal.org/project/wysiwyg_codesnippet) and [Neato](https://drupal.org/project/neato).
 
 [CodeSnippet](https://drupal.org/project/wysiwyg_codesnippet) allows content editors to insert code in just about any major language into CKEditor and be highlighted in a color theme of their choosing. [Neato](https://drupal.org/project/neato) is a theme framework based on Neat/Bourbon that our design and front end team use daily. It allowed us to facilitate designs without getting in the way of getting what we wanted, which is usually an obstacle in Drupal theming.
 
 For example, [Neato](https://drupal.org/project/neato) was also used on the [Primary Health Care Performance Initiative](http://www.) website. Since the front end team built a prototype using HTML/Neat/Bourbon, transposing that to Drupal was dead simple. The site, which uses statistical data housed in our own .NET application we call Datacenter, contains visualized graphs in Angular.js and d3.js, right inside of the Drupal theming process.
 
-* 2015 review
-* module updates
-* drupal 8
-* site launches
-* stuff stuff stuff
-* clojure
-* goals
-* facebook
+I am really excited about Neato because it provides us with a great 'blank slate' starting point from which to mix and match components with to build websites. It's been downloaded over 7500 times and generated much interest. It's used for all projects, internal or client.
 
-## Solutions
+I wrote a couple of blog posts about it:
+
+* [Neato - A Neat/Bourbon-Based Theme Framework for Drupal](http://www.velir.com/blog/2015/06/05/neato-neatbourbon-based-theme-framework-drupal)
+* [Getting Started with Neato in Drupal 8](http://www.velir.com/blog/2015/08/28/getting-started-neato-drupal-8)
+
+We were also able to put out quite a few updates and Drupal 8 versions of modules as well, which proved to be a great learning experience.
+
+* [JSON/JSONB Field](https://www.drupal.org/project/jsonb)
+* [WYSIWYG CodeSnippet](https://www.drupal.org/project/wysiwyg_codesnippet)
+* [CreditField](https://www.drupal.org/project/creditfield)
+* [Zurb TwentyTwenty](https://www.drupal.org/project/zurb_twentytwenty)
+* [Traced](https://www.drupal.org/project/traced)
+* [User Alert](https://www.drupal.org/project/user_alert)
+* [iGrowl](https://www.drupal.org/project/igrowl)
+* [Zurb Interchange](https://www.drupal.org/project/zurb_interchange)
+
+Along with that, I have been doing a great deal learning about Drupal 8. I've began a series of blog posts about doing practical development in Drupal 8, the first post is already available:
+
+* [Drupal 8: Custom Forms](http://www.velir.com/blog/2016/01/04/technical-guide-drupal-8-forms)
+
+I have a few more drafted, waiting to be published.
+
+I also built a [Yeoman generator](https://github.com/kevinquillen/generator-drupalvm) for generating a [DrupalVM](http://www.drupalvm.com) configuration. It is built for two reasons. One, you can generate VM configurations very quickly with it. Two, it helps those who are less familiar with VM configuration to be able to configure what they need to get up and running. It is very simple, and has proven to be useful.
+
+## Goals
+
+I have quite a few goals to accomplish in 2016. On the technical side of things, they are quite varied, and proved to me that I am maturing as a developer. Others, as a person,
+
+One of those goals I already accomplished. I've made a concerted effort to reduce the white noise and useless bullshit. I was inspired by posts like these:
+
+* [My year with a distraction-free iPhone](https://medium.com/@jakek/my-year-with-a-distraction-free-iphone-and-how-to-start-your-own-experiment-6ff74a0e7a50#.pk031xipz)
+* [Why I stopped paying attention to industry news](https://m.signalvnoise.com/why-i-stopped-paying-attention-to-industry-news-2e5821ea264c#.1waw572pt)
+* [The difference between time and attention](https://signalvnoise.com/posts/3919-the-difference-between-time-and-attention)
+
+Distractions and white noise. There is too much of that shit going around. I started by posting a notice to everyone on Facebook, and a week later, closed my account and deleted the app from my phone. I also deleted other apps I don't need to have.
+
+Following that, I've simply stopped trying to stay on top of every bit of news that comes out (the Javascript community will drive you nuts, for example). I don't need to process all of that information, not to mention comments, in so many articles. I've found that I just don't care what most people think.
+
+This has allowed me to free my mind of crap and actually pursue and read the things I am interested in.
+
+I am also making an effort to learn a few new paradigms and languages to broaden my horizons. Functional programming is really hot right now and something I have been meaning to get into. At the same time, I have chosen to learn Clojure to see things from a different perspective.
+
+I also want to learn about a few other languages, Swift, Python, and possibly Erlang, as time permits. The truth is, there is so much exciting things happening in languages and frameworks right now (_especially_ PHP with version 7) that a good programmer owes it to him/herself to explore and continue learning. I may even build a SlackBot in the interim for us internally.
+
+The year is already off to a great start, let's keep that ball rolling.
