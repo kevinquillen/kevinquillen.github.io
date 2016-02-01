@@ -5,7 +5,7 @@ date:   2016-01-30 10:30:00
 category: drupal
 tags:
   - drupal 8
-excerpt: Ready to test your Drupal site with Behat and Docker?
+excerpt: When developing modules for Drupal, there inevitably comes a time when you may need to include an external CSS or Javascript plugin or library for your project.
 image: /assets/images/code-3.jpg
 ---
 
