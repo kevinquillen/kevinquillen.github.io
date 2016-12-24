@@ -17,7 +17,7 @@ author :
   drupal : https://drupal.org/user/317279
   github : https://github.com/kevinquillen
   twitter : https://twitter.com/kevinquillen
-  linkedin : http://www.linkedin.com/kevinquillen
+  linkedin : http://www.linkedin.com/in/kevinquillen
   tagline: still coding. still laughing. still rocking. still ranting.
 
 paginate:	5
@@ -40,7 +40,7 @@ social:
     desc:	My Drupal.org Profile
 
   - icon:	linkedin
-    url:	http://www.linkedin.com/kevinquillen
+    url:	http://www.linkedin.com/in/kevinquillen
     desc:	Add me on LinkedIn
 
   - icon:	feed
