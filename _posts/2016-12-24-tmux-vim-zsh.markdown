@@ -29,7 +29,7 @@ Nothing to it.
 
 To be honest, setting up zsh was pretty straightforward and easy, and most of my settings did migrate. I had to tweak some of the custom shell functions I had stored to work, and the same Agnoster theme exists for zsh as well as a tool called <a href="https://github.com/robbyrussell/oh-my-zsh" target="_blank">oh my zsh</a>.
 
-I then went ahead and added zsh-autosuggestions plugin to zsh, and created a global histfile in my home directory. It's a really nice addition and saves time, though some may argue for keeping project specific histfiles and I would agree. For now, it serves me just fine.
+I then went ahead and added zsh-autosuggestions plugin to zsh, and created a global histfile in my home directory. It's a really nice addition and saves time.
 
 The second thing I wanted to do was to default to zsh anytime I opened Terminal or iTerm2. So then I learned a new command, <a href="https://linux.die.net/man/1/chsh" target="_blank">chsh</a>.
 
@@ -51,7 +51,7 @@ I also highly recommend watching this set of videos on tmux because it makes it 
 
 <iframe width="700" height="394" src="https://www.youtube.com/embed/BHhA_ZKjyxo" frameborder="0" allowfullscreen></iframe>
 
-Now, we have a pretty good setup. Tmux can be configured (from what I have seen) as 2 windows, one with a 3 way split and the other as the editing window. While I don't think I will ever replace PHPStorm with Vim + plugins (I simply am not fast enough vs with PHPStorm) I do try to do everything else in command line using it.
+Now we have a pretty good setup. Tmux can be configured (from what I have seen) as 2 windows, one with a 3 way split and the other as the editing window. While I don't think I will ever replace PHPStorm with Vim + plugins (I simply am not fast enough vs with PHPStorm) I do try to do everything else in command line using it.
 
 Up until now, I used to use the Nano editor which was shown to me ages and ages ago by one of my all time favorite colleagues, Pete. Pete was, by all standards, a command line warrior. It was actually pretty mesmerizing to see him fly around numerous terminal tabs and files in PuTTY, effortlessly navigating and editing without ever leaving the keyboard. Looking back on that was one of the things that inspired me to push my knowledge of command line and editing further.
 
