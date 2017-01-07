@@ -1,0 +1,54 @@
+---
+layout: post
+title: New Year
+subtitle: New Things
+date:   2017-01-06 12:00:00
+category: general
+tags:
+  - goals
+image: /assets/images/code-2.jpg
+---
+
+I tend to do these things at the start of every year. Every year that I make them, they tend to get larger. Sometimes you make small goals, which is okay, but are you really challenging yourself by going after low hanging fruit? I don't think so.
+
+I thought about them... absent is "go to the gym" like most everyone will say because I have been doing that 4-5 times a week since last June.
+
+### Reduce cognitive load.
+
+What I mean by this is stop trying to be the guy that knows everything. I almost ran into some burnout this year trying to 'stay on top' of whats going on in the JS world, but honestly, it seems like its their mission to make that impossible. 
+
+React, Preact, Inferno, Ember, Angular, Vue, what do you use? What do you invest in? It's hard to decide and even harder to get 100 developers to agree and standardize on it. 
+
+Even last year, I said to myself I would learn Clojure and more functional programming. But it seems people don't hype FP as much today as they did a year ago, same for Clojure. Nice to be aware of, but not necessary to know.
+
+If its a language, library or framework that I don't use in my daily workflow, I will be prone to forget it - probably as fast as I even read it. If it doesn't get used, it gets wasted.
+
+Therefore, I am swearing off learning and jumping around so much. It's requiring too much of my brain power that can be focused elsewhere. I am going to need it later.
+
+### Read more.
+
+I think I say this one a lot as well, but what I think I mean is to diversify my reading. I tend to buy a lot of technical books, I need to mix in more fiction, non fiction and non technical things. I already read a pretty decent stack this year as a mix of all, it's good to get away from development. A good ratio has seemed to be 2 non development related books for every development related one, which has worked out well so far.
+
+### Blog more.
+
+This one I say every year and seem to fail to do it. Let's change that this year. I think a lot of people say this. Maybe I just need more to say. Therefore, I need to broaden my horizons.. which I mention later.
+
+### Learn new old school tools.
+
+Shell, Vim, command line scripting. Lets get better at this, as I do use these tools everyday. So far, so good. I actually enjoy it, I do see myself doing things faster. I want to go deeper beyond what I know, just interfacing with my system, and start getting more mileage out of it.
+
+I've made it a point on my personal MacBook Pro to default to zsh and tmux. Simple to start. Window 1 has jekyll process in a pane, git in a pane, and a larger pane for misc tasks. Window 2 is all vim, which I am editing this post with. NERDTree and CtrlP plugins help me use this window to quickly switch between files if I need to go grab something, like a header for a jekyll post, I can do it. I also have Ultimate Snippets installed, I am still learning how to create snippets. Once I do, I won't need to go copy a header and edit it anymore, I can dump a boilerplate one in via snippet.
+
+That said, Vim isn't so bad. I lightly used vi and nano over the years for quick editing, but now I am pretty committed to vim.
+
+Learning via writing posts is a good way to do it. <code>vim-tutor</code> is another good way, and even <a href="http://www.vim-adventures.com" target="_blank">Vim Adventures</a> is a decent start. 
+
+### Go back to school.
+
+The big one.
+
+I've been thinking about this on and off since Thanksgiving. It just feels like the time is right. MBA and/or BS/Masters in comp sci.. and I know the internet will largely decry the need for degrees, but I miss the academic experience. I am not exactly sure what I want to study yet. It is just something I need to do for myself. And why not? I am in one of the best cities in the world to do this in, unlike before.
+
+It is also a goal that will help set up the next 30 years. Financially, sure, but also long term employable value, not to mention giving myself keys to open doors to opportunities not available to me right now. Not saying that a degree necessarily is needed, but your options are certainly limited depending on the heights you want to reach without investing two decades or more (and I've already invested one).
+
+Will I be doing web development forever? Probably not. I don't even know if this will exist as a career in 20 years at the rate things are moving. Development will exist, the web? We may not even recognize it as it is today.
