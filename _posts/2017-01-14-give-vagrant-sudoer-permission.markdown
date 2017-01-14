@@ -16,9 +16,9 @@ However, a few details are left out - particularly for people like me who didn't
 
 It requires editing the sudoers file using the visudo program, but if you have modified and extended vim on your machine, your terminal window might dump a lot of errors on the screen the moment you try to edit sudoers (for me, it was regarding missing plugins) which is scary. `:q!`'d out.
 
-Turns out, `visudo` defaults to a vim somewhere in the system that isn't the same vim that I use.
+Turns out, `visudo` defaults to vi or vim somewhere in the system that isn't the same vim that I use.
 
-First, I had to edit my user `.profile`, and define vim as my default editor:
+First, I had to edit my user `.zprofile`, and define vim as my default editor:
 
 <pre class="language-bash"><code class="language-bash">
 export EDITOR=vim
@@ -27,12 +27,12 @@ export EDITOR=vim
 Then reload it, and verify it was set:
 
 <pre class="language-bash"><code class="language-bash">
-kevinquillen > ~: . ~/.profile
+kevinquillen > ~: . ~/.zprofile
 kevinquillen > ~: env | grep EDI
 EDITOR=vim
 </code></pre>
 
-Now, when I run `sudo visudo` it will default to _my_ vim, and there were no errors.
+Now, when I run `sudo visudo` it will default to _my_ vim, and there were no errors. Note that I edit `.zprofile` since I use zsh. You may have to edit `.profile` or `.bash_profile` - whatever your choice of login shell uses.
 
 From there, simply add the following as noted in the documentation:
 
