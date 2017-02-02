@@ -47,7 +47,7 @@ Here is another example. This time, I wanted to ensure that - even if no 'exact'
  * Implements hook_preprocess_views_view_field().
  * @param $variables
  */
-function pncb_preprocess_views_view_field(&$variables) {
+function mytheme_preprocess_views_view_field(&$variables) {
   if ($variables['view']->id() == 'acquia_search') {
     // needs the full URL, not just the path that solr indexes
     if ($variables['field']->realField == 'search_api_url') {
