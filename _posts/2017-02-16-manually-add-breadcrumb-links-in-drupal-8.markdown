@@ -14,7 +14,7 @@ In Drupal, most breadcrumb generation and navigation is sufficient by basing it 
 
 This works great except in certain edge cases, such as nodes that do not have menu placement, and Views pages which may exist, but not have a set menu link. Neither Drupal core nor Menu Breadcrumb have a way to handle this scenario.
 
-Fortunately, there is an alter hook that can facilitate instances when you need to modify the breadcrumb, and that is `hook_system_breadcrumb_alter()`. Below is the code I wrote to handle items that have no menu placement yet still need a breadcrumb:`
+Fortunately, there is an alter hook that can facilitate instances when you need to modify the breadcrumb, and that is `hook_system_breadcrumb_alter()`. Below is the code I wrote to handle items that have no menu placement yet still need a breadcrumb:
 
 <pre class="language-php"><code class="language-php">
 use Drupal\Core\Breadcrumb\Breadcrumb;
