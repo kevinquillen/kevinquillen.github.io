@@ -84,7 +84,7 @@ grep -rl "/assets/img" ./docroot/themes/custom/mytheme/assets/scss | xargs sed -
 <pre class="language-bash"><code class="language-bash">
 #!/usr/bin/env bash
 
-cd docroot/themes/custom/iana/tools/gulp;
+cd docroot/themes/custom/mytheme/tools/gulp;
 gulp css;
 gulp js-libraries;
 gulp js;
