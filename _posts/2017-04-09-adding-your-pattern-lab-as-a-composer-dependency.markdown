@@ -54,7 +54,7 @@ The Pattern Lab is now pulled into `vendor/` like other Composer packages. Whene
 composer update orgname/repository_name
 </code></pre>
 
-It doesn't end here, though. Whenever I get updates, I also want to copy assets over to my Drupal theme. Any SASS, Javascript, and SVG files I want to copy over to the right directory in my Drupal theme. If you have ever dug through a Pattern Lab based prototype, you can get lost pretty quickly and manual copying is tedious and error prone.
+It doesn't end here, though. Whenever I get updates, I also want to copy any SASS, Javascript, and SVG files over to the right directory in my Drupal theme. If you have ever dug through a Pattern Lab based prototype, you can get lost pretty quickly and manual copying is tedious and error prone.
 
 I am leveraging the <a href="https://github.com/acquia/blt" target="_blank">Acquia BLT</a> scaffolding tool to control my Drupal 8 build. One of the perks is that it comes with a lot of phing tasks already ready to go for your build. Two of them in particular that are very useful for theming are `frontend:setup` and `frontend:build`.
 
@@ -84,7 +84,7 @@ grep -rl "/assets/img" ./docroot/themes/custom/mytheme/assets/scss | xargs sed -
 <pre class="language-bash"><code class="language-bash">
 #!/usr/bin/env bash
 
-cd docroot/themes/custom/iana/tools/gulp;
+cd docroot/themes/custom/mytheme/tools/gulp;
 gulp css;
 gulp js-libraries;
 gulp js;
