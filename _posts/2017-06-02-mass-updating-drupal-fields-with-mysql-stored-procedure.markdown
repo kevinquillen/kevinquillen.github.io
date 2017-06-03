@@ -22,8 +22,8 @@ The database had hundreds of rows spread across a couple dozen tables that neede
 
 For this I figured I could employ a SQL query. First, I looked for a way to find all column names that matched a particular pattern. The pattern I was looking for was `field_%_format`. All fields from the Drupal Field API that store text format values have a field in their table matching this pattern.
 
-Once I had that query, I thought hmm, how can I loop the results, and run an `UPDATE` statement to update everything in the database? Before I knew it, I found out I had to make a cursor and eventually a stored procedure.
-
+Once I had that query, I thought hmm, how can I loop the results, and run an `UPDATE` statement to update everything in the database? Before I knew it, I found out I had to make a cursor and eventually a stored procedure, two things I had never done or had to do before. Turns out, it wasn't that difficult.
+  
 Using resources and some reading, I put together a stored procedure that took a single argument (text format machine name), grabbed all fields matching that pattern, and set their value to the argument value.
 
 <pre class="language-sql"><code class="language-sql">
