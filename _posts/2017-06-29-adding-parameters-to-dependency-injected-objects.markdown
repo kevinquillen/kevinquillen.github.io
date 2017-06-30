@@ -24,7 +24,7 @@ For example, lets say on our QA server:
 - Site B is indexed to siteb_qa
 - Site C is indexed to sitec_qa
 
-Each of these indexes are stored on projectname_qa core in Solr.
+Each of these were stored on a single core in Solr.
 
 Since we have a search on each site that searches all content for any site, we aren't using Views/Search API. Instead, I setup a controller at `/search` and used Solarium client and some elbow grease to get a search stood up. I'll show that off in a future post. But since we went this route, two things happened:
 
