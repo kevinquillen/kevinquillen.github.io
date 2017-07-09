@@ -73,3 +73,5 @@ I think that in many cases this is discouraged for contrib modules because it dr
 Also note that arguments being passed to this service must be done as `new Reference('argument')`. Unlike yaml, they cannot be passed as a string here.
 
 In a future post, I will demonstrate what this user auth override is doing, and how easy it can be to implement or alter the authentication in Drupal 8.
+
+Update: Yes, it does appear you can dictate your service authority by <a href="https://drupal.stackexchange.com/a/241283/57" target="_blank">setting a higher module weight than others</a>.
