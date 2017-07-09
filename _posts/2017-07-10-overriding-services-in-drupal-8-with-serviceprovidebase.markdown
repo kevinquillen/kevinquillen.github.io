@@ -74,4 +74,6 @@ Also note that arguments being passed to this service must be done as `new Refer
 
 In a future post, I will demonstrate what this user auth override is doing, and how easy it can be to implement or alter the authentication in Drupal 8.
 
+<hr/>
+
 Update: Yes, it does appear you can dictate your service authority by <a href="https://drupal.stackexchange.com/a/241283/57" target="_blank">setting a higher module weight than others</a>.
