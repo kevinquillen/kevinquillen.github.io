@@ -50,7 +50,7 @@ This time, the procedure takes 2 arguments. What we are looking for, and what we
 Using it is as simple as you think:
 
 <pre class="language-bash"><code class="language-bash">
-mysql> CALL ("http://dev.mysite.com/", "/");
+mysql> CALL replaceFieldTextTo("http://dev.mysite.com/", "/");
 </code></pre>
 
 This statement executed in about 2 seconds and affected numerous rows across 178 tables (lots of fields and lots of revision tables!). I have to execute this on 3 different sites, so the time savings here is immense.
