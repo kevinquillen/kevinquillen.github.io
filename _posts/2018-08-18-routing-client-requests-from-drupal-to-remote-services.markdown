@@ -119,7 +119,7 @@ class SearchController extends ControllerBase {
 }
 </code></pre>
 
-A 200 OK response and the response body is returned. Every request also attaches any incoming query strings from the ReactJS app and sends them along - they are already formatted to conform with what the API expects (paging, search terms, sort filters, etc).
+A 200 OK response and the response body is returned. Every request also attaches any incoming query strings from the ReactJS app and sends them along - they are already formatted to conform with what the API expects (paging, search terms, sort filters, etc). We still return a 200 even if the request fails for whatever reason for the users sake. The frontend will handle informing the user, instead of throwing or breaking the experience.
 
 With the `#theme` property on the action, we can signal a theme hook for the page when it renders the `page.content` from the outer template:
 
