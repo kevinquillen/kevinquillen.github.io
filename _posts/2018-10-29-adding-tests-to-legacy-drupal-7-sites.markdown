@@ -10,7 +10,7 @@ image: /assets/images/code-1.jpg
 
 Most developers at some point or another will inevitably need to add custom code to a site. In Drupal, this could be anything from extending core functionality, altering forms, or creating entirely new functionality.
 
-When using best practices and having knowledge of the API/framework Drupal provides, you can scaffold functionality fairly quickly and "hook" into the right events to build custom features. It's often so easy to do that sometimes we neglect to write tests and just hop to writing code, because its fun. I am guilty of that, I believe we all are, no matter what language or platform you use.
+When using best practices and having knowledge of the API/framework Drupal provides, you can scaffold functionality fairly quickly and "hook" into the right events to build custom features. It's often so easy to do that sometimes we neglect to write tests and just hop to writing code, because its fun. I am guilty of that. I believe we all are, no matter what language or platform you use.
 
 Recently, I had to pick up a project first launched in 2015 and add a lot of new functionality to it. This a fairly successful, highly flexible Drupal 7 site that featured half data visualizations, and half managed content. We had to deliver a large new feature set for the site for October, and glancing at some of the new designs and functionality, I knew it would be wise to set aside a day or two to provide tests for what already works. This would provide a path for introducing new code with the confidence we were not breaking existing code. It also helped me to identify areas of improvement later on to refactor existing code into more performant, smaller pieces. 
 
