@@ -46,7 +46,7 @@ Use your best judgement and try not to get lost in the weeds.
 
 ### Writing Your First Test
 
-The simplest kind of test you can do is a unit test. One of the new requirements I had was that while processing data from an API response, I was to pass a color value in the result to a rendered visualization. This color would be used say, in the case of a bar graph, to make the bar green or yellow - whatever the data manager deemed appropriate.
+The simplest kind of test you can do is a unit test. One of the new requirements I had was that while processing data from an API response, I was to pass a color value in the result to a rendered visualization. This color would be used say, in the case of a bar graph, to make the bar green or yellow - whatever the data manager deemed appropriate. This value is passed into a ReactJS component.
 
 There were a few parameters surrounding it:
 
