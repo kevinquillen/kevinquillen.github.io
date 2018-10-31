@@ -10,11 +10,11 @@ image: /assets/images/code-1.jpg
 
 Most developers at some point or another will inevitably need to add custom code to a site. In Drupal, this could be anything from extending core functionality, altering forms, or creating entirely new functionality.
 
-When using best practices and having knowledge of the API/framework Drupal provides, you can scaffold functionality fairly quickly and "hook" into the right events to build custom features. It's often so easy to do that sometimes we neglect to write tests and just hop to writing code, because its fun. I am guilty of that, I believe we all are, no matter what language or platform you use.
+When using best practices and having knowledge of the API/framework Drupal provides, you can scaffold functionality fairly quickly and "hook" into the right events to build custom features. It's often so easy to do that sometimes we neglect to write tests and just hop to writing code, because its fun. I am guilty of that. I believe we all are, no matter what language or platform you use.
 
-Recently, I had to pick up a project first launched in 2015 and add a lot of new functionality to it. This was a fairly successful, highly flexible Drupal 7 site that featured half data visualizations, and half managed content. We had to deliver a large new feature set for the site for October, and glancing at some of the new designs and functionality, I knew it would be wise to set aside a day or two to provide tests for what already works. This would provide a path for introducing new code with the confidence we were not breaking existing code. It also helped me to identify areas of improvement later on to refactor existing code into more performant, smaller pieces. 
+Recently, I had to pick up a project first launched in 2015 and add a lot of new functionality to it. This a fairly successful, highly flexible Drupal 7 site that featured half data visualizations, and half managed content. We had to deliver a large new feature set for the site for October, and glancing at some of the new designs and functionality, I knew it would be wise to set aside a day or two to provide tests for what already works. This would provide a path for introducing new code with the confidence we were not breaking existing code. It also helped me to identify areas of improvement later on to refactor existing code into more performant, smaller pieces. 
 
-This wouldn't have been possible without the tests.
+This wouldn't have been possible without tests.
 
 When I sat down to tackle new functionality, I wrote the tests first to provide a sensible path to whats expected of the implementation code. We will look at a few examples.
 
@@ -46,7 +46,7 @@ Use your best judgement and try not to get lost in the weeds.
 
 ### Writing Your First Test
 
-The simplest kind of test you can do is a unit test. One of the new requirements I had was that while processing data from an API response, I was to pass a color value in the result to a rendered visualization. This color would be used say, in the case of a bar graph, to make the bar green or yellow - whatever the data manager deemed appropriate.
+The simplest kind of test you can do is a unit test. One of the new requirements I had was that while processing data from an API response, I was to pass a color value in the result to a rendered visualization. This color would be used say, in the case of a bar graph, to make the bar green or yellow - whatever the data manager deemed appropriate. This value is passed into a ReactJS component.
 
 There were a few parameters surrounding it:
 
@@ -54,7 +54,7 @@ There were a few parameters surrounding it:
 - If no color provided, the color used would be 'purple'
 - The color must be a value in an approved list of colors, if not, 'purple' will be used
 
-This is a great candidate to write unit test(s) for. It has zero external dependencies, it does not rely on any other modules needing to be enabled, and doesn't care if Drupal is installed or not. We just need to take some values, and execute code against it and evaluate the return.
+This is a great candidate to write unit test(s) for. It has zero external dependencies, and it does not rely on any other modules needing to be enabled. We just need to take some values, and execute code against it and evaluate the return.
 
 First, I start out by stubbing the test class, based on what I know from the above requirements:
 
@@ -101,7 +101,7 @@ class ColorTest extends DrupalUnitTestCase {
 }
 </code></pre>
 
-This is a solid start. These test stubs sound like it will cover our use case.
+This is a solid start. These test stubs sound like it will cover a majority of our use case.
 
 So where to now? Well, we can start filling in the code that will create a passing test. Having a default color available could be provided by a constant. Lets check that the constant exists, and is set to purple:
 
@@ -272,7 +272,9 @@ public function testColorIsValidElseDefault() {
 
 Wow, there we go. We have some solid tests and a great function for developers to utilize with a singly point of entry and predictable, reliable output. `mymodule_get_viz_color` can be used anywhere in the application and do _exactly_ what it should do.
 
-We are also reinforced by new features of PHP 7 with the addition of type hints and return types. If anyone passes an argument that is not a string, or the function did not return a bool, it would cause a fatal error. We did not write tests for those two cases, because we did not need to. However, you _could_ provide a tests to ensure an exception is thrown, but we would need PHPUnit for that to assert an exception was encountered.
+We are also reinforced by new features of PHP 7 with the addition of type hints and return types. If anyone passes an argument that is not a string, or the function did not return a bool, it would cause a fatal TypeError. We did not write tests for those two cases, because we did not need to. The code won't execute successfully if someone tries to pass a non-string value to our function. If an editor adds the number 999999 as a color value in the .NET application, PHP will throw a TypeError and say something like "Argument 1 expected to be a string, int passed" with some additional information. From here, we can update the remote system to enforce the same data constraint or cast the value to a string before saving - and we will likely never see an error here again! 
+
+However, you _could_ provide a tests to ensure an exception is thrown, but we would need PHPUnit for that to assert an exception was encountered. This is useful for when you want to test that exceptions _do_ get encountered when they should, something SimpleTest cannot test for.
 
 Here is an example of catching a custom exception from a pet project I have in Drupal 8:
 
