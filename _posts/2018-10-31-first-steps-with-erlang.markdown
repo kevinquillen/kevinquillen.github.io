@@ -87,4 +87,4 @@ color:get("    ")
 > "purple"
 </code></pre>
 
-I didn't convert the unit tests first or anything like that, as these are just my first steps. Its a very different world and causing me to think in a very different way, which isn't a bad thing. I'm stil learning about how to define constants and data types like tuples and lists, but I like what I see so far and look forward to learning more.
+I didn't convert the unit tests first or anything like that, as these are just my first steps. Its a very different world and causing me to think in a very different way, which isn't a bad thing. I'm still learning about how to define constants and data types like tuples and lists, but I like what I see so far and look forward to learning more.
