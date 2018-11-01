@@ -5,7 +5,7 @@ date: 2018-11-02 12:00:00
 category: erlang
 tags:
  - testing
-image: /assets/images/code-2.jpg
+image: /assets/images/code-1.jpg
 ---
 
 Shortly after publishing my last post about Erlang, I noticed a bug in the code which would not have happened if I wrote unit test(s) first. I did not do that simply because I just started learning, and didn't want too many barriers up front to getting started (its hard to write tests when you are learning new syntax and methodology).
