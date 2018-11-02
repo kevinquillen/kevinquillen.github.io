@@ -20,18 +20,18 @@ After some quick reading of the docs, I created an EUnit test file and started f
 -include_lib("eunit/include/eunit.hrl").
 
 simple_test() ->
-  ?assertEqual(color:get(""), "purple"),
-  ?assertEqual(color:get("vrefn"), "purple"),
-  ?assertEqual(color:get("GrEeN"), "green"),
-  ?assertEqual(color:get("PURPLE"), "purple"),
-  ?assertEqual(color:get("OrAnge"), "orange"),
-  ?assertEqual(color:get("BlUe"), "blue"),
-  ?assertEqual(color:get("yellow"), "yellow"),
-  ?assertEqual(color:get("grey"), "grey"),
-  ?assertEqual(color:get("red"), "red"),
-  ?assertNotEqual(color:get("BLACK"), "black"),
-  ?assertNotEqual(color:get("OrAnge"), "OrAnge"),
-  ?assertNotEqual(color:get("orange "), "orange").
+  ?assertEqual("purple", color:get("")),
+  ?assertEqual("purple", color:get("vrefn")),
+  ?assertEqual("green", color:get("GrEeN")),
+  ?assertEqual("purple", color:get("PURPLE")),
+  ?assertEqual("orange", color:get("OrAnge")),
+  ?assertEqual("blue", color:get("BlUe")),
+  ?assertEqual("yellow", color:get("yellow")),
+  ?assertEqual("grey", color:get("grey")),
+  ?assertEqual("red", color:get("red")),
+  ?assertNotEqual("black", color:get("BLACK")),
+  ?assertNotEqual("OrAnge", color:get("OrAnge")),
+  ?assertNotEqual("orange", color:get("orange ")).
 </code></pre>
 
 Upon running this test, it would have told me I forgot to include an approved color, orange:
