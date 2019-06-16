@@ -10,7 +10,7 @@ permalink: /:categories/:year/:month/:day/:title
 title : Kevin Quillen
 tagline: Still coding. Still rocking. Still ranting.
 description: Still coding. Still rocking. Still ranting.
-url: http://kevinquillen.com/
+url: http://kevinquillen.com
 author :
   name : Kevin Quillen
   email : kevinquillen@gmail.com
@@ -62,3 +62,5 @@ copyright:
 
 production_url : http://kevinquillen.com
 rss_path: rss.xml
+plugins:
+  - jekyll-feed
