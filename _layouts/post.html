@@ -17,10 +17,12 @@ article: true
 	</div>
 </header>
 <div id="article">
+	<div class="post-content">
 	{{ content }}
 	<small><em><strong>Tagged with:</strong> {% for tag in page.tags %}
 		{{ tag }}{% if forloop.index != page.tags.size %}, {% endif %}
 		{% endfor %}</em></small>
+	</div>
 	<hr>
 	{% include widgets/disqus.html %}
 </div>
