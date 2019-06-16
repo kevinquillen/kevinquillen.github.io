@@ -23,6 +23,7 @@ article: true
 		{{ tag }}{% if forloop.index != page.tags.size %}, {% endif %}
 		{% endfor %}</em></small>
 	</div>
+	<p><strong>Posted: <time datetime="{{ page.date | date: "%F"}}">{{ page.date | date: "%B %d, %Y"}}</time>
 	<hr>
 	{% include widgets/disqus.html %}
 </div>
