@@ -10,10 +10,10 @@ permalink: /:categories/:year/:month/:day/:title
 title : Kevin Quillen
 tagline: Still coding. Still rocking. Still ranting.
 description: Still coding. Still rocking. Still ranting.
-url: http://kevinquillen.com
+url: http://kevinquillen.com/
 author :
   name : Kevin Quillen
-  email : kevin@inclind.com
+  email : kevinquillen@gmail.com
   drupal : https://drupal.org/user/317279
   github : https://github.com/kevinquillen
   twitter : https://twitter.com/kevinquillen
